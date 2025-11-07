@@ -1,0 +1,37 @@
+/* Header Colive&Work */
+
+.navbar {
+  background-color: #000000; /* fond noir */
+  padding: 0.8rem 1rem;
+}
+
+.navbar-brand {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.navbar-brand span {
+  color: #ffffff;
+}
+
+/* Liens du menu */
+.nav-link {
+  color: #ffffff !important;
+  margin-right: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #ff6d36 !important; /* orange au survol */
+}
+
+/* Bouton menu mobile */
+.navbar-toggler {
+  background-color: #ff6d36;
+  border: none;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}

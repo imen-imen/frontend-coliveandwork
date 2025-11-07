@@ -1,1 +1,57 @@
-/* You can add global styles to this file, and also import other style files */
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+/* COULEURS GLOBALES COLIVE&WORK */
+
+/* Fond global du site */
+body {
+  background-color: #000000;
+  color: #ffffff; 
+  font-family: "Inter", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Titres */
+h1, h2, h3, h4, h5 {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Liens */
+a {
+  color: #ff6d36;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #dbdbdb; 
+}
+
+/* Boutons principaux */
+.btn-primary {
+  background-color: #ff6d36;
+  border: none;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #e55e2c; 
+}
+
+/* Boutons secondaires */
+.btn-outline-primary {
+  color: #ff6d36;
+  border-color: #ff6d36;
+}
+
+.btn-outline-primary:hover {
+  background-color: #ff6d36;
+  color: #ffffff;
+}
+
+/* Sections grises (blocs secondaires) */
+section {
+  background-color: #111111;
+  color: #ffffff;
+  padding: 2rem 0;
+}
