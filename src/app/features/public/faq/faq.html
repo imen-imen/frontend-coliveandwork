@@ -1,0 +1,28 @@
+<section class="faq-page container py-5">
+  <h2 class="text-center mb-5 text-uppercase fw-bold text-orange">
+    Foire aux Questions
+  </h2>
+
+  <div class="accordion" id="accordionExample">
+    @for (item of items; track item.id) {
+      <div class="accordion-item">
+        <h2 class="accordion-header" [id]="'heading' + item.id">
+          <button class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  [attr.data-bs-target]="'#collapse' + item.id">
+            {{ item.id }}. {{ item.question }}
+          </button>
+        </h2>
+
+        <div class="accordion-collapse collapse"
+             [id]="'collapse' + item.id"
+             data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            {{ item.answer }}
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</section>

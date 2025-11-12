@@ -1,8 +1,17 @@
+/* ============================================================
+   THEME GLOBAL COLIVE&WORK
+   ============================================================ */
+
+/* Couleurs principales :
+   Noir : #000000
+   Orange : #ff6d36
+   Blanc : #ffffff
+   Gris clair : #dbdbdb
+*/
+@import "bootstrap/dist/css/bootstrap.min.css";
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
-/* COULEURS GLOBALES COLIVE&WORK */
-
-/* Fond global du site */
+/* Font globale et couleurs de base */
 body {
   background-color: #000000;
   color: #ffffff; 
@@ -16,6 +25,24 @@ h1, h2, h3, h4, h5 {
   color: #ffffff;
   font-weight: 600;
 }
+
+/* ===== Titre commun à toutes les sections ===== */
+h2.section-title {
+  color: #ff6d36;
+  font-weight: 700;
+  font-size: 1.6rem;     
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  text-align: center;       
+}
+
+@media (max-width: 576px) {
+  h2.section-title { font-size: 1.3rem; }
+}
+
+/* variante plus grande si besoin ponctuel */
+h2.section-title.section-title--lg { font-size: 1.9rem; }
+
 
 /* Liens */
 a {
@@ -38,7 +65,7 @@ a:hover {
   background-color: #e55e2c; 
 }
 
-/* Boutons secondaires */
+/* Boutons secondaires (contour orange) */
 .btn-outline-primary {
   color: #ff6d36;
   border-color: #ff6d36;
@@ -49,9 +76,62 @@ a:hover {
   color: #ffffff;
 }
 
-/* Sections grises (blocs secondaires) */
+/* Sections générales */
 section {
   background-color: #111111;
   color: #ffffff;
   padding: 2rem 0;
 }
+
+/* ============================================================
+   AJUSTEMENTS BOOTSTRAP POUR LE THEME COLIVE&WORK
+   ============================================================ */
+
+/* Harmoniser les couleurs des titres dans les sections sombres */
+section h2, section h3, section h4 {
+  color: #ff6d36; 
+}
+
+/* Uniformiser la largeur des containers */
+.container {
+  max-width: 1200px;
+}
+
+/* Espacement entre les blocs */
+section {
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+}
+
+/* ============================================================
+   AJUSTEMENTS DU FOND GLOBAL
+   ============================================================ */
+
+/* Fond noir sur toute la page */
+html, body {
+  height: 100%;
+  background-color: #000 !important;
+  color: #fff;
+}
+
+/* Composant principal Angular */
+app-root {
+  display: block;
+  min-height: 100vh;
+  background-color: #000;
+}
+
+/* Suppression des fonds blancs Bootstrap */
+.container, .row, .col {
+  background-color: transparent !important;
+}
+
+/* Sécurité visuelle : supprime les résidus de fond clair */
+* {
+  background-color: transparent;
+  color: inherit;
+}
+
+/* ============================================================
+   FIN DU FICHIER GLOBAL
+   ============================================================ */

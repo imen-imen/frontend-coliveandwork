@@ -1,0 +1,120 @@
+/* PAGE : QUI SOMMES-NOUS */
+
+/* Section principale */
+.about {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Titres */
+.about h2,
+.about h3 {
+  color: #ff6d36;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* Paragraphes */
+.about p {
+  color: #dbdbdb;
+  margin-bottom: 15px;
+}
+
+/* Valeurs */
+.values {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.value {
+  display: inline-block;
+  border: 2px solid #ff6d36;
+  border-radius: 50px;
+  color: #ff6d36;
+  padding: 15px 40px;
+  margin: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.value:hover {
+  background-color: #ff6d36;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Bloc contact */
+.contact-section {
+  margin-top: 60px;
+}
+
+.contact-section h3 {
+  color: #ff6d36;
+  margin-bottom: 15px;
+}
+
+.contact-section a {
+  color: #ff6d36;
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  color: #dbdbdb;
+}
+
+/* Bloc "Suivez-nous" + Icônes à gauche */
+.social-icons-left {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.social-icons-left h3 {
+  color: #ff6d36;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Icônes blanches par défaut */
+.social-icons-left i {
+  font-size: 30px;
+  margin-right: 15px;
+  color: #fff; /* blanches */
+  cursor: pointer;
+  transition: color 0.2s, transform 0.2s;
+}
+
+/* Survol → orange */
+.social-icons-left i:hover {
+  color: #ff6d36;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .about h2,
+  .about h3 {
+    text-align: center;
+  }
+
+  .values {
+    margin-top: 20px;
+  }
+
+  .social-icons-left {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .value {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+  }
+}

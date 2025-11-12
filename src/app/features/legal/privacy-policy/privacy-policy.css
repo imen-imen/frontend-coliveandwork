@@ -1,0 +1,102 @@
+/* PAGE : CONDITIONS GÉNÉRALES D’UTILISATION (CGU) */
+
+
+.legal {
+  background-color: #000;
+  color: #dbdbdb;
+  line-height: 1.8;
+  padding: 2rem 1rem;
+}
+
+.legal h1 {
+  color: #ff6d36;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.legal h2 {
+  color: #ff6d36;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #ff6d36;
+  padding-left: 10px;
+}
+
+.legal p {
+  color: #dbdbdb;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.legal ul {
+  margin-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.legal li {
+  margin-bottom: 0.5rem;
+}
+
+/* Liens */
+.legal a {
+  color: #ff6d36;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.legal a:hover {
+  color: #ffa067;
+}
+
+/* Sommaire (optionnel) */
+.legal .summary {
+  background-color: #111;
+  border: 1px solid #222;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.legal .summary h3 {
+  color: #ff6d36;
+  margin-bottom: 1rem;
+}
+
+.legal .summary a {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #dbdbdb;
+}
+
+.legal .summary a:hover {
+  color: #ff6d36;
+}
+
+.legal .text-muted,
+.privacy .text-muted {
+  --bs-text-opacity: 1 !important;  
+  color: #ffffff !important;        
+  font-weight: 500;
+  opacity: 1 !important;
+}
+
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .legal {
+    padding: 1rem;
+  }
+
+  .legal h1 {
+    font-size: 1.8rem;
+  }
+
+  .legal h2 {
+    font-size: 1.3rem;
+  }
+}

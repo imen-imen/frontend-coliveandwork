@@ -1,0 +1,73 @@
+/* ============================================================
+   PAGE : FOIRE AUX QUESTIONS (FAQ)
+   ============================================================ */
+
+/* Section principale (fond noir + texte blanc) */
+.faq-page {
+  background-color: #000;
+  color: #fff;
+  border-radius: 10px;
+  padding: 2rem 1rem;
+}
+
+/* Couleur orange personnalisée */
+.text-orange {
+  color: #ff6d36;
+}
+
+/* Style général des boutons d’accordéon */
+.faq-page .accordion-button {
+  background-color: #1a1a1a;
+  color: #fff;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+/* État ouvert : fond orange + texte noir */
+.faq-page .accordion-button:not(.collapsed) {
+  background-color: #ff6d36;
+  color: #000;
+  font-weight: 600;
+}
+
+/* Contenu de la réponse */
+.faq-page .accordion-body {
+  background-color: #111;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Flèche blanche visible sur fond foncé */
+.faq-page .accordion-button::after {
+  filter: invert(1) brightness(2);
+  transition: transform 0.3s ease;
+}
+
+/* Flèche noire quand la question est ouverte */
+.faq-page .accordion-button:not(.collapsed)::after {
+  transform: rotate(-180deg);
+  filter: invert(0);
+}
+
+/* Animation légère au survol */
+.faq-page .accordion-button:hover {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+/* Espacement entre les éléments */
+.faq-page .accordion-item {
+  border: none;
+  margin-bottom: 0.8rem;
+}
+
+/* Pour s'assurer que le texte reste bien lisible sur mobile */
+@media (max-width: 768px) {
+  .faq-page {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .faq-page .accordion-button {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,50 @@
+/* ============================================================
+   PAGE : ERREUR 404 - COLIVE & WORK
+   ============================================================ */
+
+.error404 {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+/* Grand chiffre 404 avec effet lumineux */
+.error404 h1 {
+  font-size: 10rem;
+  margin-bottom: 0;
+  text-shadow: 0 0 20px rgba(255, 109, 54, 0.6);
+  color: #ff6d36; /* accent visuel, reste dans la charte */
+}
+
+/* Sous-titre */
+.error404 h2 {
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #ff6d36;
+  text-transform: uppercase;
+}
+
+/* Texte descriptif */
+.error404 p {
+  color: #dbdbdb;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+/* Effet spécifique du bouton (ton <app-button>) */
+.error404 app-button:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .error404 h1 {
+    font-size: 5rem;
+  }
+}

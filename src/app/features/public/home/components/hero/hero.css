@@ -1,0 +1,57 @@
+/* ============================================================
+   HERO SECTION - COLIVE & WORK
+   ============================================================ */
+
+/* Conteneur principal */
+.hero {
+  background: url('/assets/images/home/img-hero.jpg') center/cover no-repeat;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  padding: 2rem 1rem;
+}
+
+/* Titre principal */
+.hero h1 {
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+/* Texte d’introduction */
+.hero p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  color: #dbdbdb; /* gris clair lisible sur le fond sombre */
+}
+
+/* Ajustements du bouton Colive&Work */
+.hero app-button {
+  display: inline-block;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.hero app-button:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 70vh;
+    padding: 3rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}

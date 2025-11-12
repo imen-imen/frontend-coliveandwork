@@ -1,0 +1,66 @@
+/* ============================================================
+   FORMULAIRE DE CONNEXION - CoLive & Work
+   ============================================================ */
+
+.login-container {
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.text-orange {
+  color: #ff6d36 !important;
+}
+
+.form-control {
+  background-color: #111;
+  border: 1px solid #ff6d36;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #fff;
+  box-shadow: none;
+}
+
+.btn-orange {
+  background-color: #ff6d36;
+  border: none;
+  color: #fff;
+  padding: 0.8rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn-orange:hover {
+  background-color: #e85c28;
+}
+
+.btn-outline-orange {
+  border: 2px solid #ff6d36;
+  color: #ff6d36;
+  border-radius: 8px;
+  padding: 0.7rem 2rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn-outline-orange:hover {
+  background-color: #ff6d36;
+  color: #fff;
+}
+
+.error {
+  color: #ff4444;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}

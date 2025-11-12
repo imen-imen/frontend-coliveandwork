@@ -1,0 +1,41 @@
+/* Bouton principal (orange) */
+.btn-primary-custom {
+  background-color: #ff6d36;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+  background-color: #e65d2c;
+}
+
+/* Bouton secondaire (gris clair) */
+.btn-secondary-custom {
+  background-color: #dbdbdb;
+  color: #000000;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+}
+
+/* Bouton contour (orange transparent) */
+.btn-outline-custom {
+  background-color: transparent;
+  border: 2px solid #ff6d36;
+  color: #ff6d36;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+  background-color: #ff6d36;
+  color: #ffffff;
+}
