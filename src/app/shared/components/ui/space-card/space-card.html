@@ -1,0 +1,37 @@
+<div class="card shadow-sm space-card border-0">
+
+  <!-- Badge statut -->
+  <span class="badge position-absolute top-0 start-0 m-2 px-3 py-2 status-badge"
+        [ngClass]="space.isActive ? 'bg-success' : 'bg-danger'">
+    {{ space.isActive ? 'Disponible' : 'Indisponible' }}
+  </span>
+
+  <!-- Image -->
+  <img 
+    [src]="space.imageUrl"
+    class="card-img-top"
+    alt="{{ space.titlePrivateSpace }}"
+  >
+
+  <div class="card-body">
+
+    <h5 class="card-title text-orange fw-bold">
+      {{ space.titlePrivateSpace }}
+    </h5>
+
+    <p class="mb-1 text-secondary">
+      {{ space.areaM2 }} m² • {{ space.capacity }} personnes
+    </p>
+
+    <p class="mb-3">
+      Dès <span class="text-orange fw-bold">{{ space.pricePerMonth }} €</span>/mois
+    </p>
+
+    <app-button 
+      label="Voir les détails"
+      type="outline"
+      class="w-100"
+    ></app-button>
+
+  </div>
+</div>

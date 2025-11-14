@@ -1,0 +1,64 @@
+/* ================================
+   CARD ESPACE PRIVÉ (Colive&Work)
+================================ */
+
+/* Style général de la card */
+.space-card {
+  background-color: #111 !important;  
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform .25s ease;
+  position: relative;
+  color: #fff !important;
+}
+
+/* Hover léger et pro */
+.space-card:hover {
+  transform: scale(1.03);
+}
+
+/* Image */
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+  width: 100%;
+  border-bottom: 1px solid #222;
+}
+
+/* Badge statut (Disponible / Indisponible) */
+.status-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 30px;
+  padding: 6px 12px;
+}
+
+/* Titre */
+.card-title {
+  color: #ff6d36 !important;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* Texte secondaire */
+.text-secondary {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Prix */
+.text-orange {
+  color: #ff6d36 !important;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .space-card {
+    border-radius: 10px;
+  }
+
+  .card-img-top {
+    height: 150px;
+  }
+}
