@@ -15,19 +15,26 @@ export class TopThreeSpaces {
 
   spaces: any[] = [];
 
-ngOnInit() {
-  this.spaceService.getTop3Spaces().subscribe({
-    next: (res: any) => {
-      const allSpaces = res['hydra:member'];
+  ngOnInit() {
+    this.spaceService.getTop3Spaces().subscribe({
+      next: (res: any) => {
+        console.log("### REPONSE API ANGULAR ###", res);
 
-      // Filtrer seulement les espaces disponibles
-      const activeSpaces = allSpaces.filter((s: any) => s.isActive === true);
+        const allSpaces = res['member'];
+        console.log("### MEMBER ###", allSpaces);
 
-      // Prendre seulement les 3 premiers
-      this.spaces = activeSpaces.slice(0, 3);
-    },
-    error: err => console.error(err)
-  });
-}
+        const activeSpaces = allSpaces?.filter((s: any) => s.isActive === true);
+        console.log("### ACTIVE ###", activeSpaces);
+
+        console.log("### COLIVING ###", activeSpaces[0].colivingSpace);
+
+
+        this.spaces = activeSpaces?.slice(0, 3) ?? [];
+      },
+
+
+      error: err => console.error("### ERREUR API ###", err)
+    });
+  }
 
 }

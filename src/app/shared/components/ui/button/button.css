@@ -39,3 +39,21 @@
   background-color: #ff6d36;
   color: #ffffff;
 }
+
+/* Bouton icône seule (loupe) */
+.search-btn {
+  width: 40px !important;
+  height: 38px !important;
+  padding: 0 !important;
+  border-radius: 0.5rem; 
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-btn i {
+  font-size: 18px;
+  color: #fff;
+}
+

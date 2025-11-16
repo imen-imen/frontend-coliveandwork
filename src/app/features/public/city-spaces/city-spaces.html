@@ -1,1 +1,15 @@
-<p>city-spaces works!</p>
+<section class="city-spaces py-5 container">
+	<h2 class="h2.section-title text-center mb-4">
+		Trouvez votre espace de coliving idéal dans les plus grandes villes françaises
+	</h2>
+
+	<div class="grid">
+		@for (city of cities; track $index) {
+		<div class="city-card">
+			<img [src]="'assets/images/cities/' + city.name.toLowerCase() + '.jpg'" [alt]="city.name"/>
+
+			<div class="city-name">{{ city.name }}</div>
+		</div>
+		}
+	</div>
+</section>

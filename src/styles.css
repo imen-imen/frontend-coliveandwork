@@ -43,7 +43,6 @@ h2.section-title {
 /* variante plus grande si besoin ponctuel */
 h2.section-title.section-title--lg { font-size: 1.9rem; }
 
-
 /* Liens */
 a {
   color: #ff6d36;
@@ -87,7 +86,7 @@ section {
    AJUSTEMENTS BOOTSTRAP POUR LE THEME COLIVE&WORK
    ============================================================ */
 
-/* Harmoniser les couleurs des titres dans les sections sombres */
+/* Harmoniser les couleurs des titres */
 section h2, section h3, section h4 {
   color: #ff6d36; 
 }
@@ -126,11 +125,13 @@ app-root {
   background-color: transparent !important;
 }
 
-/* Sécurité visuelle : supprime les résidus de fond clair */
-* {
-  background-color: transparent;
-  color: inherit;
+section.hero {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
+
 
 /* ============================================================
    FIN DU FICHIER GLOBAL

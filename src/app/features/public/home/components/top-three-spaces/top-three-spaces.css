@@ -1,4 +1,16 @@
 .top-spaces-section {
-  padding: 2rem 0;
+  padding: 60px 0;
+  background-color: #0d0d0d;
 }
 
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--orange, #ff6600);
+  margin-bottom: 30px;
+}
+
+.row {
+  justify-content: center;
+}

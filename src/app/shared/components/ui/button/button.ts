@@ -13,4 +13,6 @@ export class Button {
   @Input() label: string = 'Bouton';
   @Input() type: 'primary' | 'secondary' | 'outline' = 'primary';
   @Input() routerLink?: string | any[];
+  @Input() icon: string = '';
+  @Input() isIconOnly = false;
 }

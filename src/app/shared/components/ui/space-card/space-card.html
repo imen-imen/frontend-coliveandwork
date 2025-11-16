@@ -7,8 +7,8 @@
   </span>
 
   <!-- Image -->
-  <img 
-    [src]="space.imageUrl"
+  <img
+    [src]="space.colivingSpace?.images?.[0]?.imageUrl || 'https://picsum.photos/600/400'"
     class="card-img-top"
     alt="{{ space.titlePrivateSpace }}"
   >

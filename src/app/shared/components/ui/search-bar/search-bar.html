@@ -1,0 +1,64 @@
+<form class="search-row" (ngSubmit)="onSearch()">
+
+  <!-- LOCALISATION -->
+  <div class="field">
+  <select
+    class="field-input"
+    [(ngModel)]="form.city"
+    name="city"
+  >
+    <option value="">Choisissez une ville</option>
+
+    @for (c of cities; track c.id) {
+      <option [value]="c.name">{{ c.name }}</option>
+    }
+  </select>
+</div>
+
+
+  <!-- DATE DÉBUT -->
+  <div class="field">
+    <div class="icon-input">
+      <i class="bi bi-calendar-event" (click)="start.click()"></i>
+      <input #fakeStart type="text" class="fake-date" placeholder="Date début" readonly (click)="start.click()">
+      <input #start type="date" class="real-date" (change)="fakeStart.value = start.value">
+    </div>
+  </div>
+
+  <!-- DATE FIN -->
+  <div class="field">
+    <div class="icon-input">
+      <i class="bi bi-calendar-check" (click)="end.click()"></i>
+      <input #fakeEnd type="text" class="fake-date" placeholder="Date fin" readonly (click)="end.click()">
+      <input #end type="date" class="real-date" (change)="fakeEnd.value = end.value">
+    </div>
+  </div>
+
+<!-- NOMBRE DE PERSONNES  -->
+<div class="people-field-inline">
+
+  <span class="people-inline-label">Nombre de personnes</span>
+
+<select
+  class="people-inline-select"
+  [(ngModel)]="form.people"
+  name="people"
+>
+  <option value="1">1</option>
+  <option value="2">2</option>
+</select>
+
+</div>
+
+
+  <!-- BOUTON LOUPE -->
+  <div class="btn-wrapper">
+    <app-button
+      type="primary"
+      icon="bi bi-search"
+      [isIconOnly]="true"
+      class="search-btn">
+    </app-button>
+  </div>
+
+</form>

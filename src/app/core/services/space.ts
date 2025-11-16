@@ -8,14 +8,17 @@ import { API_BASE_URL } from '../api';
 export class SpaceService {
   private http = inject(HttpClient);
 
-  /**
-   * Récupère les espaces privés disponibles (isActive = true)
-   * triés par note (rate) décroissante
-   * puis on affichera les 3 premiers dans le composant
-   */
+  /** Top 3 */
   getTop3Spaces() {
     return this.http.get(
       `${API_BASE_URL}/private_spaces?isActive=true&order[rate]=desc`
+    );
+  }
+
+  /** Pour la page /nos-espaces */
+  getAllSpaces() {
+    return this.http.get(
+      `${API_BASE_URL}/private_spaces?isActive=true`
     );
   }
 }

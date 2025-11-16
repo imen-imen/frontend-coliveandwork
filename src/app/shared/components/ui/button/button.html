@@ -1,18 +1,36 @@
 @if (routerLink) {
-  <a [routerLink]="routerLink"
-     [ngClass]="{
-       'btn btn-primary-custom': type === 'primary',
-       'btn btn-secondary-custom': type === 'secondary',
-       'btn btn-outline-custom': type === 'outline'
-     }">
-    {{ label }}
+  <a
+    [routerLink]="routerLink"
+    [ngClass]="{
+      'btn btn-primary-custom': type === 'primary',
+      'btn btn-secondary-custom': type === 'secondary',
+      'btn btn-outline-custom': type === 'outline'
+    }"
+  >
+    @if (icon) {
+      <i [class]="icon"></i>
+      @if (!isIconOnly) { &nbsp; }
+    }
+
+    @if (!isIconOnly) {
+      {{ label }}
+    }
   </a>
 } @else {
-  <button [ngClass]="{
-    'btn btn-primary-custom': type === 'primary',
-    'btn btn-secondary-custom': type === 'secondary',
-    'btn btn-outline-custom': type === 'outline'
-  }">
-    {{ label }}
+  <button
+    [ngClass]="{
+      'btn btn-primary-custom': type === 'primary',
+      'btn btn-secondary-custom': type === 'secondary',
+      'btn btn-outline-custom': type === 'outline'
+    }"
+  >
+    @if (icon) {
+      <i [class]="icon"></i>
+      @if (!isIconOnly) { &nbsp; }
+    }
+
+    @if (!isIconOnly) {
+      {{ label }}
+    }
   </button>
 }

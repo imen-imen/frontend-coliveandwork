@@ -1,0 +1,18 @@
+/* Réduit l’espace sous le hero */
+.hero {
+  margin-bottom: 1rem !important; 
+  padding-bottom: 0 !important;
+}
+
+/* Réduit l’espace au-dessus de la section des espaces */
+.best-spaces {
+  padding-top: 1rem !important; 
+  margin-top: 0 !important;
+}
+
+/* Ajuste l’espace sous la search bar */
+app-search-bar {
+  display: block;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
