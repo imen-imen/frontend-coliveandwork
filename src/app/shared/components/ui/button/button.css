@@ -1,3 +1,20 @@
+/* Style global pour <a> et <button> du composant */
+.app-btn {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: auto !important;     
+  padding: 0.6rem 1.4rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;      
+  border: none;
+  background: none;
+}
+
 /* Bouton principal (orange) */
 .btn-primary-custom {
   background-color: #ff6d36;
@@ -11,7 +28,7 @@
 }
 
 .btn-primary-custom:hover {
-  background-color: #e65d2c;
+ 	background-color: #e65d2c;
 }
 
 /* Bouton secondaire (gris clair) */
@@ -46,7 +63,6 @@
   height: 38px !important;
   padding: 0 !important;
   border-radius: 0.5rem; 
-  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,4 +72,3 @@
   font-size: 18px;
   color: #fff;
 }
-

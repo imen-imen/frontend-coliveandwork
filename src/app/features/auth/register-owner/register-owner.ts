@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-register-owner',
+  standalone: true,
   imports: [],
   templateUrl: './register-owner.html',
   styleUrl: './register-owner.css',

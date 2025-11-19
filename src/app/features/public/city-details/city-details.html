@@ -1,0 +1,64 @@
+<section class="container py-5">
+
+  <h2 class="city-title">
+    Nos espaces privés disponibles :
+  </h2>
+
+  <p class="city-description">
+    Découvrez nos espaces privés chargés depuis notre API.
+  </p>
+
+  <div class="spaces-list">
+    @for (space of spaces; track space.id) {
+
+      <div class="space-card">
+
+        <div class="left">
+          <img class="space-img" src="assets/images/private-spaces/default.jpg">
+          <span class="badge" 
+                [class.disponible]="space.isActive"
+                [class.indisponible]="!space.isActive">
+            {{ space.isActive ? 'Disponible' : 'Indisponible' }}
+          </span>
+        </div>
+
+        <div class="center">
+
+          <h3 class="space-title">{{ space.titlePrivateSpace }}</h3>
+
+          <p class="space-coliving">
+            {{ space.colivingSpace.titleColivingSpace }}
+            – {{ space.colivingSpace.housingType }}
+          </p>
+
+          <p class="space-address">
+            Ville :
+            {{
+              space.colivingSpace.colivingCity?.name 
+              ?? 'Ville non définie'
+            }}
+          </p>
+
+          <div class="details">
+            <div>Surface chambre : {{ space.areaM2 }} m²</div>
+            <div>Capacité : {{ space.capacity }} pers.</div>
+            <div>Surface coliving : {{ space.colivingSpace.totalAreaM2 }} m²</div>
+            <div>Pièces : {{ space.colivingSpace.roomCount }}</div>
+          </div>
+
+          <p class="price">Dès {{ space.pricePerMonth }} €/mois</p>
+
+          <button class="details-btn">Voir les détails</button>
+
+        </div>
+
+        <div class="right">
+          <img class="map-img" src="assets/images/google-map-img.png">
+        </div>
+
+      </div>
+
+    }
+  </div>
+
+</section>

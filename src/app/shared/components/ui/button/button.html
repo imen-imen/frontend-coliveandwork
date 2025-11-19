@@ -1,10 +1,12 @@
+<!-- Si routerLink → lien -->
 @if (routerLink) {
   <a
     [routerLink]="routerLink"
+    class="app-btn"
     [ngClass]="{
-      'btn btn-primary-custom': type === 'primary',
-      'btn btn-secondary-custom': type === 'secondary',
-      'btn btn-outline-custom': type === 'outline'
+      'btn-primary-custom': type === 'primary',
+      'btn-secondary-custom': type === 'secondary',
+      'btn-outline-custom': type === 'outline'
     }"
   >
     @if (icon) {
@@ -16,12 +18,16 @@
       {{ label }}
     }
   </a>
-} @else {
+}
+
+<!-- Sinon → bouton classique -->
+@else {
   <button
+    class="app-btn"
     [ngClass]="{
-      'btn btn-primary-custom': type === 'primary',
-      'btn btn-secondary-custom': type === 'secondary',
-      'btn btn-outline-custom': type === 'outline'
+      'btn-primary-custom': type === 'primary',
+      'btn-secondary-custom': type === 'secondary',
+      'btn-outline-custom': type === 'outline'
     }"
   >
     @if (icon) {

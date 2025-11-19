@@ -1,0 +1,211 @@
+/* ===========================
+   Layout général
+=========================== */
+.details-container {
+  display: flex;
+  gap: 45px;
+  max-width: 1350px;
+  margin: 40px auto;
+  padding: 10px 20px;
+}
+
+.left {
+  flex: 2;
+  color: #fff;
+}
+
+.right {
+  flex: 1.1;
+}
+
+
+/* ===========================
+   Titres & textes
+=========================== */
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.description {
+  margin: 15px 0 25px;
+  color: rgb(230,230,230);
+  line-height: 1.6;
+}
+
+h3 {
+  margin: 25px 0 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ff6a00;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+
+/* ===========================
+   Bloc photos (si tu utilises un composant)
+=========================== */
+.photos-block {
+  margin: 25px 0;
+}
+
+.photos-block app-photo-gallery,
+.photos-block app-photo-slider {
+  display: block;
+  margin: 0;
+}
+
+
+/* ===========================
+   Equipements (liste simple)
+=========================== */
+.equipments {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 25px;
+}
+
+.equipments li {
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  font-size: 15px;
+}
+
+
+/* ===========================
+   Coliving parent info
+=========================== */
+.coliving-info p {
+  margin: 4px 0;
+  font-size: 15px;
+}
+
+
+/* ===========================
+   Image carte
+=========================== */
+.map-image {
+  width: 100%;
+  max-width: 460px;
+  border-radius: 6px;
+  margin-top: 10px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.4);
+}
+
+
+/* ===========================
+   Bloc de droite (réservation)
+=========================== */
+.box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+.text {
+  margin-bottom: 20px;
+}
+
+
+.badge {
+  background: #00b679;
+  padding: 6px 12px;
+  font-weight: bold;
+  font-size: 13px;
+  color: white;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+
+/* ===========================
+   Formulaire
+=========================== */
+input[type="date"],
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  margin-bottom: 15px;
+  margin-top: 6px;
+}
+
+
+/* Option DUO */
+.duo-options {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0 20px;
+}
+
+.duo-options span {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.duo-options span.active {
+  background: #ff6a00;
+  border-color: #ff6a00;
+  color: white;
+}
+
+
+/* Boutons */
+.btn-primary {
+  width: 100%;
+  background: #ff6a00;
+  padding: 12px;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.btn-secondary {
+  width: 100%;
+  background: #222;
+  padding: 12px;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+
+/* ===========================
+   Chat
+=========================== */
+.chat {
+  font-size: 14px;
+  margin-top: 30px;
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+}
+
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 950px) {
+  .details-container {
+    flex-direction: column;
+  }
+}

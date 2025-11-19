@@ -1,66 +1,119 @@
-/* ============================================================
-   FORMULAIRE DE CONNEXION - CoLive & Work
-   ============================================================ */
-
-.login-container {
-  background-color: #000;
+/* ----- PAGE GLOBALE LOGIN----- */
+.login-page {
+  background: #000;
   color: #fff;
   min-height: 100vh;
+  padding: 5rem 1rem;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  padding: 2rem;
+  flex-direction: column;
 }
 
-.text-orange {
-  color: #ff6d36 !important;
+/* Bloc central */
+.login-wrapper {
+  width: 100%;
+  max-width: 650px;
+  text-align: center;
 }
 
-.form-control {
-  background-color: #111;
-  border: 1px solid #ff6d36;
-  color: #fff;
-  border-radius: 8px;
+/* ----- TITRES ----- */
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff5e1a;
 }
 
-.form-control:focus {
-  outline: none;
-  border-color: #fff;
-  box-shadow: none;
+.subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
 }
 
-.btn-orange {
-  background-color: #ff6d36;
-  border: none;
-  color: #fff;
-  padding: 0.8rem;
+/* ----- MESSAGE GENERAL D'ERREUR API ----- */
+.custom-alert {
+  margin-bottom: 1.5rem;
+}
+
+/* ----- FORMULAIRE ----- */
+.form-container {
+  width: 100%;
+}
+
+.form-container .row {
+  justify-content: center;
+}
+
+/* Labels */
+.label {
+  font-size: 1.1rem;
   font-weight: 600;
-  border-radius: 8px;
-  transition: 0.3s;
-  cursor: pointer;
+  white-space: nowrap;
 }
 
-.btn-orange:hover {
-  background-color: #e85c28;
+/* Champ invalide : bordure rouge */
+.is-invalid-field {
+  border: 1px solid #ff4d4f;
 }
 
-.btn-outline-orange {
-  border: 2px solid #ff6d36;
-  color: #ff6d36;
-  border-radius: 8px;
-  padding: 0.7rem 2rem;
-  transition: 0.3s;
-  cursor: pointer;
+/* Texte d'erreur sous les champs */
+.error small {
+  color: #ff6a2b;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  display: block;
 }
 
-.btn-outline-orange:hover {
-  background-color: #ff6d36;
+/* ----- OPTIONS (Se souvenir / Mot de passe oublié) ----- */
+.options-row {
+  margin-top: 10px;
+}
+
+.remember-block {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;   /* alignement centré horizontal */
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.forgot-block {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 30px;           /* espace parfait pour séparation */
+}
+
+.forgot {
   color: #fff;
+  text-decoration: underline;
+  white-space: nowrap;
 }
 
-.error {
-  color: #ff4444;
-  font-size: 0.9rem;
-  margin-top: 5px;
+.forgot:hover {
+  opacity: 0.8;
+}
+
+/* ----- TEXTE INSCRIPTION ----- */
+.register-text {
+  margin-top: 2.5rem;
+  font-size: 1rem;
+}
+
+/* ----- RESPONSIVE ----- */
+@media (max-width: 576px) {
+
+  .label {
+    text-align: left;
+    margin-bottom: 0.5rem;
+  }
+
+  .remember-block,
+  .forgot-block {
+    justify-content: flex-start;
+    margin-left: 0;
+  }
+
+  .forgot-block {
+    margin-top: 0.5rem;
+  }
 }

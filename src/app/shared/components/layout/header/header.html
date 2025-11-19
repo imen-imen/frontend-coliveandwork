@@ -1,66 +1,76 @@
 <nav class="navbar navbar-expand-lg shadow-sm bg-black">
-  <div class="container">
-    <!-- Logo + texte -->
-    <a class="navbar-brand d-flex align-items-center" routerLink="/">
-      <img src="logos/logo-colivework.webp" alt="logo" width="60" height="60" class="me-2 img-fluid">
-      <span class="fw-bold fs-4 text-white mb-0">COLIVE&WORK</span>
-    </a>
+	<div class="container">
 
-    <!-- Bouton mobile -->
-    <button
-      class="navbar-toggler bg-light"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+		<!-- Logo + texte -->
+		<a class="navbar-brand d-flex align-items-center" routerLink="/">
+			<img src="logos/logo-colivework.webp" alt="logo" width="60" height="60" class="me-2 img-fluid">
+			<span class="fw-bold fs-4 text-white mb-0">COLIVE&WORK</span>
+		</a>
 
-    <!-- Liens -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mx-auto text-center">
-        <li class="nav-item">
-          <a routerLink="/"
-             routerLinkActive="active"
-             [routerLinkActiveOptions]="{ exact: true }"
-             class="nav-link text-white">
-            Accueil
-          </a>
-        </li>
-        <li class="nav-item">
-          <a routerLink="/qui-sommes-nous"
-             routerLinkActive="active"
-             [routerLinkActiveOptions]="{ exact: true }"
-             class="nav-link text-white">
-            Qui sommes-nous ?
-          </a>
-        </li>
-        <li class="nav-item">
-          <a routerLink="/nos-espaces"
-             routerLinkActive="active"
-             [routerLinkActiveOptions]="{ exact: true }"
-             class="nav-link text-white">
-            Nos espaces
-          </a>
-        </li>
-      </ul>
+		<!-- Bouton mobile -->
+		<button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+			<span class="navbar-toggler-icon"></span>
+		</button>
 
-      <!-- Boutons -->
-      <div class="d-flex justify-content-center justify-content-lg-end mt-3 mt-lg-0 gap-2">
-        <app-button
-          label="Espace client"
-          type="outline"
-          routerLink="/espace-client">
-        </app-button>
+		<!-- Liens -->
+		<div class="collapse navbar-collapse" id="navbarNav">
 
-        <app-button
-          label="Espace propriétaire"
-          type="outline"
-          routerLink="/espace-proprietaire">
-        </app-button>
-      </div>
-    </div>
-  </div>
+			<!-- Liens du milieu -->
+			<ul class="navbar-nav mx-auto text-center">
+
+				<li class="nav-item">
+					<a
+						routerLink="/"
+						routerLinkActive="active"
+						[routerLinkActiveOptions]="{ exact: true }"
+						class="nav-link text-white">
+						Accueil
+					</a>
+				</li>
+
+				<li class="nav-item">
+					<a
+						routerLink="/qui-sommes-nous"
+						routerLinkActive="active"
+						[routerLinkActiveOptions]="{ exact: true }"
+						class="nav-link text-white">
+						Qui sommes-nous ?
+					</a>
+				</li>
+
+				<li class="nav-item">
+					<a
+						routerLink="/nos-espaces"
+						routerLinkActive="active"
+						[routerLinkActiveOptions]="{ exact: true }"
+						class="nav-link text-white">
+						Nos espaces
+					</a>
+				</li>
+
+			</ul>
+
+			<!-- Boutons de droite -->
+			<div class="d-flex justify-content-center justify-content-lg-end mt-3 mt-lg-0 gap-2">
+
+				<app-button
+					label="Espace client"
+					type="outline"
+					routerLink="/espace-client/login"
+					routerLinkActive="active"
+					[routerLinkActiveOptions]="{ exact: true }">
+				</app-button>
+
+				<app-button
+					label="Espace propriétaire"
+					type="outline"
+					routerLink="/espace-proprietaire/login"
+					routerLinkActive="active"
+					[routerLinkActiveOptions]="{ exact: true }">
+				</app-button>
+
+			</div>
+
+		</div>
+	</div>
 </nav>

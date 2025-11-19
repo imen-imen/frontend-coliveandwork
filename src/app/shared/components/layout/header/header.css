@@ -49,6 +49,16 @@ app-button + app-button {
   margin-left: 0.5rem;
 }
 
+/* ======== STYLE DES BOUTONS ACTIFS (app-button) ========= */
+
+/* Quand routerLinkActive="active" est appliqué */
+app-button.active ::ng-deep button {
+  background-color: #ff6d36 !important;
+  border-color: #ff6d36 !important;
+  color: #fff !important;
+  font-weight: 700;
+}
+
 /* Responsive : centrage du contenu sur petit écran */
 @media (max-width: 991px) {
   .navbar-nav {

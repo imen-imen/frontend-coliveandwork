@@ -4,36 +4,47 @@ import { Routes } from '@angular/router';
 import { Home } from './features/public/home/home';
 import { About } from './features/public/about/about';
 import { CitySpaces } from './features/public/city-spaces/city-spaces';
+import { CityDetails } from './features/public/city-details/city-details';
+import { SpaceDetails } from './features/public/space-details/space-details';
 import { Faq } from './features/public/faq/faq';
 import { TermsUse } from './features/legal/terms-use/terms-use';
 import { PrivacyPolicy } from './features/legal/privacy-policy/privacy-policy';
 import { Error404 } from './shared/components/error/error404/error404';
 import { Login } from './features/auth/login/login';
+import { RegisterClient } from './features/auth/register-client/register-client';
+import { RegisterOwner } from './features/auth/register-owner/register-owner';
 
-
-// Définition des routes principales de l'application
 export const routes: Routes = [
-    // Page "Accueil"
+
   { path: '', component: Home },
-  
-    // Page "Qui sommes-nous"
+
   { path: 'qui-sommes-nous', component: About },
 
-  // Page "Nos espaces"
   { path: 'nos-espaces', component: CitySpaces },
 
-  // Page "FAQ"
+  { path: 'city/:name', component: CityDetails },
+
+  { path: 'espace/:id', component: SpaceDetails },
+
   { path: 'faq', component: Faq },
 
-    // Page "Conditions Générales d'Utilisation "
   { path: 'conditions-generales-d-utilisation', component: TermsUse },
 
-    // Page "Politique de confidentialité "
   { path: 'politique-de-confidentialite', component: PrivacyPolicy },
 
-  // Page d’erreur 404 
-{ path: '**', component: Error404 },
+// Login client
+{ path: 'espace-client/login', component: Login, data: { userType: 'client' } },
 
-//Page login
-  { path: 'login', component: Login },
+// Login propriétaire
+{ path: 'espace-proprietaire/login', component: Login, data: { userType: 'owner' } },
+
+// Inscription client
+{ path: 'espace-client/registration', component: RegisterClient },
+
+// Inscription propriétaire
+{ path: 'espace-proprietaire/registration', component: RegisterOwner },
+
+
+  // 404
+  { path: '**', component: Error404 },
 ];
