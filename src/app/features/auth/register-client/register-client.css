@@ -1,0 +1,74 @@
+/* ----- PAGE GLOBALE ----- */
+.login-page {
+  background: #000;
+  color: #fff;
+  min-height: 100vh;
+  padding: 5rem 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Bloc central */
+.login-wrapper {
+  width: 100%;
+  max-width: 650px;
+  text-align: center;
+}
+
+/* ----- TITRES ----- */
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff5e1a;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* ----- MESSAGE ERREUR API ----- */
+.custom-alert {
+  margin-bottom: 1.5rem;
+}
+
+/* ----- FORMULAIRE ----- */
+.form-container {
+  width: 100%;
+}
+
+/* Labels */
+.label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  white-space: nowrap;
+  color: #ff5e1a;
+}
+
+/* Champ invalide */
+.is-invalid-field {
+  border: 1px solid #ff4d4f !important;
+}
+
+/* Texte d'erreur */
+.error small {
+  color: #ff6a2b;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  display: block;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 576px) {
+
+  .label {
+    text-align: left;
+    margin-bottom: 0.5rem;
+  }
+
+  .login-page {
+    padding-top: 2rem;
+  }
+}

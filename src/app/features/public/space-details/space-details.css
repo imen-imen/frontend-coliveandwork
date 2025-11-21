@@ -16,8 +16,10 @@
 
 .right {
   flex: 1.1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-
 
 /* ===========================
    Titres & textes
@@ -47,23 +49,36 @@ p {
   line-height: 1.4;
 }
 
-
 /* ===========================
-   Bloc photos (si tu utilises un composant)
+   Bloc photos — AJUSTÉ
 =========================== */
-.photos-block {
-  margin: 25px 0;
+.photos {
+  margin: 25px 0 35px;
 }
 
-.photos-block app-photo-gallery,
-.photos-block app-photo-slider {
+.photo-large {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
   display: block;
-  margin: 0;
+  margin-bottom: 15px;  /* espace propre */
 }
 
+/* 3 petites photos — alignées */
+.photo-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.photo-grid img {
+  width: 32%;
+  border-radius: 6px;
+  object-fit: cover;
+}
 
 /* ===========================
-   Equipements (liste simple)
+   Équipements (ICÔNES BOOTSTRAP)
 =========================== */
 .equipments {
   list-style: none;
@@ -75,8 +90,16 @@ p {
   padding: 6px 0;
   border-bottom: 1px solid rgba(255,255,255,0.1);
   font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
+.icon {
+  font-size: 27px;
+  color: #ff6a00;
+  flex-shrink: 0;
+}
 
 /* ===========================
    Coliving parent info
@@ -85,7 +108,6 @@ p {
   margin: 4px 0;
   font-size: 15px;
 }
-
 
 /* ===========================
    Image carte
@@ -98,7 +120,6 @@ p {
   box-shadow: 0px 2px 8px rgba(0,0,0,0.4);
 }
 
-
 /* ===========================
    Bloc de droite (réservation)
 =========================== */
@@ -106,12 +127,13 @@ p {
   background: #fff;
   padding: 25px;
   border-radius: 8px;
+  color: #111;
+  width: 100%;
 }
 
 .text {
   margin-bottom: 20px;
 }
-
 
 .badge {
   background: #00b679;
@@ -123,7 +145,6 @@ p {
   margin-bottom: 15px;
   display: inline-block;
 }
-
 
 /* ===========================
    Formulaire
@@ -139,6 +160,11 @@ select {
   margin-top: 6px;
 }
 
+.min-stay {
+  font-size: 13px;
+  color: #777;
+  margin-top: -10px;
+}
 
 /* Option DUO */
 .duo-options {
@@ -162,7 +188,6 @@ select {
   border-color: #ff6a00;
   color: white;
 }
-
 
 /* Boutons */
 .btn-primary {
@@ -189,7 +214,6 @@ select {
   font-size: 15px;
 }
 
-
 /* ===========================
    Chat
 =========================== */
@@ -200,12 +224,141 @@ select {
   padding-top: 15px;
 }
 
-
 /* ===========================
-   Responsive
+   Responsive LARGE (≤ 950px)
 =========================== */
 @media (max-width: 950px) {
   .details-container {
     flex-direction: column;
+    margin: 20px auto;
+  }
+
+  .right {
+    width: 100%;
+  }
+
+  .box {
+    position: static;
+  }
+
+  .map-image {
+    max-width: 100%;
+  }
+}
+
+/* ===========================
+   Responsive TABLETTE (≤ 768px)
+=========================== */
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .details-container {
+    gap: 25px;
+    padding: 0 10px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  /* Photos → 2 colonnes */
+  .photo-grid {
+    flex-wrap: wrap;
+  }
+
+  .photo-grid img {
+    width: 48%;
+  }
+
+  .equipments li {
+    font-size: 14px;
+  }
+
+  .icon {
+    font-size: 24px;
+  }
+
+  .box {
+    padding: 20px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .map-image {
+    max-width: 100%;
+    margin-top: 15px;
+  }
+}
+
+/* ===========================
+   Responsive MOBILE (≤ 480px)
+=========================== */
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .details-container {
+    padding: 0 5px;
+    margin-top: 20px;
+  }
+
+  .description {
+    font-size: 13px;
+    text-align: justify;
+  }
+
+  /* Photos → 1 colonne */
+  .photo-grid {
+    flex-direction: column;
+  }
+
+  .photo-grid img {
+    width: 100%;
+  }
+
+  .equipments li {
+    padding: 4px 0;
+    font-size: 13px;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+
+  .box {
+    padding: 18px;
+  }
+
+  input[type="date"],
+  input[type="text"] {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    font-size: 13px;
+    padding: 9px;
+  }
+
+  .chat {
+    font-size: 13px;
+    margin-top: 20px;
+  }
+
+  .map-image {
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 4px;
   }
 }

@@ -1,1 +1,165 @@
-<p>register-owner works!</p>
+<!-- Page d'inscription propriétaire -->
+<div class="login-page">
+
+  <div class="login-wrapper">
+
+    <!-- Titre -->
+    <h2 class="title">Bienvenue sur CoLive & Work !</h2>
+    <p class="subtitle">Veuillez vous inscrire pour accéder à votre espace personnel !</p>
+
+    <!-- Encadré informations -->
+    <div class="info-box">
+      Pour finaliser votre inscription, merci de compléter ce formulaire
+      et d’accepter les différentes conditions.
+    </div>
+
+    <!-- Erreur API -->
+    @if (apiError) {
+      <div class="alert alert-danger custom-alert">{{ apiError }}</div>
+    }
+
+    <!-- FORMULAIRE -->
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="form-container">
+
+      <!-- NOM -->
+      <div class="row mb-3">
+        <label class="col-12 col-md-3 text-md-end label">Nom :</label>
+        <div class="col-12 col-md-6">
+          <input class="form-control" formControlName="lastname">
+          @if (lastnameCtrl?.touched && lastnameCtrl?.invalid) {
+            <small class="error">Nom obligatoire.</small>
+          }
+        </div>
+      </div>
+
+      <!-- PRENOM -->
+      <div class="row mb-3">
+        <label class="col-12 col-md-3 text-md-end label">Prénom :</label>
+        <div class="col-12 col-md-6">
+          <input class="form-control" formControlName="firstname">
+          @if (firstnameCtrl?.touched && firstnameCtrl?.invalid) {
+            <small class="error">Prénom obligatoire.</small>
+          }
+        </div>
+      </div>
+
+      <!-- TELEPHONE -->
+      <div class="row mb-3">
+        <label class="col-12 col-md-3 text-md-end label">Téléphone :</label>
+        <div class="col-12 col-md-6">
+          <input class="form-control" formControlName="phone">
+          @if (phoneCtrl?.touched && phoneCtrl?.invalid) {
+            <small class="error">Téléphone obligatoire.</small>
+          }
+        </div>
+      </div>
+
+      <!-- EMAIL -->
+      <div class="row mb-3">
+        <label class="col-12 col-md-3 text-md-end label">Email :</label>
+        <div class="col-12 col-md-6">
+          <input class="form-control" type="email" formControlName="email">
+          @if (emailCtrl?.touched && emailCtrl?.invalid) {
+            <small class="error">Email invalide ou obligatoire.</small>
+          }
+        </div>
+      </div>
+
+      <!-- PAYS -->
+      <div class="row mb-3">
+        <label class="col-12 col-md-3 text-md-end label">Pays :</label>
+        <div class="col-12 col-md-6">
+          <input class="form-control" formControlName="country">
+          @if (countryCtrl?.touched && countryCtrl?.invalid) {
+            <small class="error">Champ obligatoire.</small>
+          }
+        </div>
+      </div>
+
+      <!-- CODE POSTAL + VILLE -->
+      <div class="row mb-3">
+
+        <label class="col-12 col-md-3 text-md-end label">Code postal :</label>
+        <div class="col-6 col-md-3">
+          <input class="form-control" formControlName="postalCode">
+          @if (postalCodeCtrl?.touched && postalCodeCtrl?.invalid) {
+            <small class="error">Obligatoire.</small>
+          }
+        </div>
+
+        <label class="col-12 col-md-1 text-md-end label">Ville :</label>
+        <div class="col-6 col-md-3">
+          <input class="form-control" formControlName="city">
+          @if (cityCtrl?.touched && cityCtrl?.invalid) {
+            <small class="error">Obligatoire.</small>
+          }
+        </div>
+
+      </div>
+
+      <!-- NUMERO + RUE -->
+      <div class="row mb-3">
+
+        <label class="col-12 col-md-3 text-md-end label">Numéro :</label>
+        <div class="col-6 col-md-3">
+          <input class="form-control" formControlName="streetNumber">
+          @if (streetNumberCtrl?.touched && streetNumberCtrl?.invalid) {
+            <small class="error">Obligatoire.</small>
+          }
+        </div>
+
+        <label class="col-12 col-md-1 text-md-end label">Rue :</label>
+        <div class="col-6 col-md-3">
+          <input class="form-control" formControlName="streetName">
+          @if (streetNameCtrl?.touched && streetNameCtrl?.invalid) {
+            <small class="error">Obligatoire.</small>
+          }
+        </div>
+      </div>
+
+      <!-- TYPE IDENTITÉ -->
+      <div class="row mb-3">
+        <label class="col-12 col-md-3 text-md-end label">Type d'identité :</label>
+        <div class="col-12 col-md-6">
+          <input class="form-control" formControlName="identityType">
+          @if (identityTypeCtrl?.touched && identityTypeCtrl?.invalid) {
+            <small class="error">Champ obligatoire.</small>
+          }
+        </div>
+      </div>
+
+      <!-- CHECKBOXES -->
+      <div class="checkbox-line">
+        <input type="checkbox" formControlName="acceptPublication">
+        <label>J’accepte la convention de publication</label>
+      </div>
+      @if (registerForm.controls['acceptPublication'].touched && registerForm.controls['acceptPublication'].invalid) {
+        <small class="error">Obligatoire.</small>
+      }
+
+      <div class="checkbox-line">
+        <input type="checkbox" formControlName="certifyInfos">
+        <label>Je certifie l'exactitude des informations</label>
+      </div>
+      @if (registerForm.controls['certifyInfos'].touched && registerForm.controls['certifyInfos'].invalid) {
+        <small class="error">Obligatoire.</small>
+      }
+
+      <div class="checkbox-line">
+        <input type="checkbox" formControlName="acceptCGU">
+        <label>J’accepte les CGU</label>
+      </div>
+      @if (registerForm.controls['acceptCGU'].touched && registerForm.controls['acceptCGU'].invalid) {
+        <small class="error">Obligatoire.</small>
+      }
+
+      <!-- BOUTON -->
+      <div class="text-center mt-4">
+        <app-button label="S’inscrire"></app-button>
+      </div>
+
+    </form>
+
+  </div>
+
+</div>

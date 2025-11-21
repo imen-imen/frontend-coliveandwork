@@ -5,7 +5,7 @@
     <h2 class="title">Bienvenue sur CoLive & Work !</h2>
     <p class="subtitle">Veuillez vous connecter pour accéder à votre espace !</p>
 
-    <!-- MESSAGE GENERAL D'ERREUR API -->
+    <!-- MESSAGE ERREUR API -->
     @if (apiError) {
       <div class="alert alert-danger custom-alert">
         {{ apiError }}
@@ -25,8 +25,8 @@
           <input
             type="email"
             class="form-control"
-            [ngClass]="{ 'is-invalid-field': emailCtrl?.touched && emailCtrl?.invalid }"
-            formControlName="email">
+            formControlName="email"
+            [ngClass]="{ 'is-invalid-field': emailCtrl?.touched && emailCtrl?.invalid }">
 
           @if (emailCtrl?.touched && emailCtrl?.invalid) {
             <div class="error">
@@ -41,7 +41,7 @@
         </div>
       </div>
 
-      <!-- PASSWORD -->
+      <!-- MOT DE PASSE -->
       <div class="row mb-3 align-items-center justify-content-center">
         <label class="col-12 col-md-3 text-md-end label">Mot de passe :</label>
 
@@ -49,8 +49,8 @@
           <input
             type="password"
             class="form-control"
-            [ngClass]="{ 'is-invalid-field': passwordCtrl?.touched && passwordCtrl?.invalid }"
-            formControlName="password">
+            formControlName="password"
+            [ngClass]="{ 'is-invalid-field': passwordCtrl?.touched && passwordCtrl?.invalid }">
 
           @if (passwordCtrl?.touched && passwordCtrl?.invalid) {
             <div class="error">
@@ -76,17 +76,16 @@
         </div>
 
         <div class="col-6 col-md-3 forgot-block">
-          <a href="#" class="forgot">Mot de passe oublié ?</a>
+          <span class="forgot text-muted">Mot de passe oublié ?</span>
         </div>
 
       </div>
 
       <!-- BOUTON LOGIN -->
       <div class="text-center">
-        <app-button
-          label="Se connecter"
-          type="primary">
-        </app-button>
+        <button type="submit" class="btn btn-primary">
+          Se connecter
+        </button>
       </div>
 
     </form>
@@ -97,15 +96,11 @@
     </p>
 
     <div class="text-center mt-2">
-      <app-button
-        label="S'inscrire"
-        type="primary"
-        [routerLink]="[
-          userType === 'client'
-            ? '/espace-client/registration'
-            : '/espace-proprietaire/registration'
-        ]">
-      </app-button>
+<button class="btn btn-primary"
+        [routerLink]="userType === 'client' ? '/espace-client/registration' : '/espace-proprietaire/registration'">
+  S'inscrire
+</button>
+
     </div>
 
   </div>

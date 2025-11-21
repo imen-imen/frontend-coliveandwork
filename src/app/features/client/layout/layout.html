@@ -1,0 +1,21 @@
+<div class="client-layout">
+
+  <aside class="sidebar">
+
+    <h2 class="title">Espace Client</h2>
+    <p class="welcome">Bonjour {{ user?.firstName }}</p>
+
+    <nav>
+      <a routerLink="/client/dashboard" routerLinkActive="active">Tableau de bord</a>
+      <a routerLink="/client/reservations" routerLinkActive="active">Mes réservations</a>
+      <a routerLink="/client/profile" routerLinkActive="active">Mon profil</a>
+      <a routerLink="/client/contact-admin" routerLinkActive="active">Contacter l’administration</a>
+    </nav>
+
+  </aside>
+
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
+
+</div>

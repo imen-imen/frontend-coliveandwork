@@ -1,24 +1,21 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 import { AuthService } from '../../../core/services/auth/auth';
 
 @Component({
-  selector: 'app-client-profile',
+  selector: 'app-client-dashboard',
   standalone: true,
-  imports: [CommonModule, FormsModule],
-  templateUrl: './client-profile.html',
-  styleUrls: ['./client-profile.css']
+  imports: [CommonModule, RouterLink],
+  templateUrl: './dashboard.html',
+  styleUrls: ['./dashboard.css']
 })
-export class ClientProfile {
-
-  // Informations utilisateur récupérées depuis le token
+export class Dashboard {
   user: any = null;
 
   private auth = inject(AuthService);
 
   ngOnInit(): void {
-    // Lecture de l'utilisateur courant
     this.user = this.auth.getCurrentUser?.() ?? null;
   }
 }
