@@ -7,17 +7,16 @@
   z-index: 1;
 }
 
-/* Conteneur centré */
 .search-container {
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-/* Ligne de la barre */
+/* Ligne principale */
 .search-row {
   display: flex;
-  align-items: flex-end;
+  align-items: center;  
   justify-content: center;
   gap: 25px;
   width: 100%;
@@ -25,17 +24,29 @@
   color: #fff;
 }
 
-/* Champ générique (ville + dates) */
+
+/* ============================================================
+   HAUTEUR UNIFIÉE POUR TOUS LES ÉLÉMENTS
+=============================================================== */
+.field-input,
+.icon-input,
+.fake-date,
+.people-field-inline,
+.search-btn {
+  height: 40px !important;
+  box-sizing: border-box;
+}
+
+/* === CHAMP VILLE === */
 .field {
   display: flex;
   flex-direction: column;
   width: 200px;
 }
 
-/* Inputs texte (champ ville) */
 .field-input {
   width: 100%;
-  padding: 6px 10px;
+  padding: 0 10px;
   background: #fff;
   border: none;
   color: #000;
@@ -44,13 +55,13 @@
   color: #777;
 }
 
-/* Zone date */
+/* === DATES === */
 .icon-input {
   display: flex;
   align-items: center;
   background: #000;
   border: 1px solid #ff6d36;
-  padding-left: 10px;
+  padding-left: 8px;
   position: relative;
   cursor: pointer;
 }
@@ -59,25 +70,22 @@
   color: #fff;
   font-size: 18px;
   margin-right: 8px;
-  cursor: pointer;
 }
 
-/* Petite flèche à droite */
+/* Flèche des dates */
 .icon-input::after {
   content: "▼";
   font-size: 12px;
   color: #fff;
   position: absolute;
   right: 10px;
-  pointer-events: none;
   opacity: 0.6;
+  pointer-events: none;
 }
 
-/* Faux input */
 .fake-date {
   flex: 1;
-  padding: 6px;
-  padding-right: 26px;
+  padding: 0 28px 0 8px;
   background: transparent;
   border: none;
   color: #fff;
@@ -87,7 +95,6 @@
   color: #777;
 }
 
-/* Vrai input invisible */
 .real-date {
   position: absolute;
   left: 0;
@@ -99,23 +106,31 @@
   z-index: 5;
 }
 
-/* === PERSONNES EN LIGNE === */
+/* ============================================================
+   NOMBRE DE PERSONNES (FIX DÉFINITIF)
+=============================================================== */
 .people-field-inline {
   display: flex;
   align-items: center;
-  gap: 8px;                     
-  border: 1px solid #ff6d36;    
+  gap: 10px;
+  border: 1px solid #ff6d36;
   border-radius: 4px;
-  padding: 4px 10px;
-  height: 36px;                 
+  padding: 0 10px;
   background: #000;
   color: #fff;
+  height: 40px !important;
 }
 
 .people-inline-label {
   font-size: 13px;
   font-weight: 600;
   color: #ff6d36;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .people-inline-select {
@@ -123,13 +138,16 @@
   border: none;
   color: #fff;
   cursor: pointer;
-  padding-right: 20px;          /* espace avant la flèche */
+  padding: 0 20px 0 5px;
+  height: 40px;
+  line-height: 40px;
 
   appearance: none;
   -webkit-appearance: none;
   font-size: 14px;
 }
 
+/* Flèche du select */
 .people-field-inline::after {
   content: "▼";
   font-size: 12px;
@@ -139,18 +157,22 @@
   opacity: 0.6;
 }
 
+/* Options internes */
+.people-inline-select option {
+  color: #000 !important;
+  background: #fff !important;
+}
 
 /* === BOUTON LOUPE === */
 .btn-wrapper {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .search-btn {
   width: 40px !important;
-  height: 38px !important;
+  height: 40px !important;
   padding: 0 !important;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -161,13 +183,7 @@
   color: #fff;
 }
 
-.people-inline-select option {
-  color: #000 !important;
-  background: #fff !important;
-}
-
-
-/* Responsive */
+/* === RESPONSIVE === */
 @media (max-width: 992px) {
   .search-row {
     flex-wrap: wrap;
@@ -175,7 +191,7 @@
   }
 
   .field,
-  .people-field-inline {   
+  .people-field-inline {
     width: 45%;
   }
 
@@ -186,6 +202,5 @@
 
   .search-btn {
     width: 100%;
-    justify-content: center;
   }
 }

@@ -10,5 +10,12 @@ import { Button } from '../button/button';
   styleUrls: ['./space-card.css']
 })
 export class SpaceCard {
+
   @Input() space: any;
+
+  // Fallback d'image si l'URL API ne charge pas
+  useFallbackImage(event: any) {
+    event.target.src = 'assets/images/default-space.jpg';
+  }
+
 }

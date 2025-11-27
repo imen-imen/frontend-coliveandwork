@@ -6,11 +6,12 @@
     {{ space.isActive ? 'Disponible' : 'Indisponible' }}
   </span>
 
-  <!-- Image -->
+  <!-- Image avec fallback -->
   <img
-    [src]="space.colivingSpace?.images?.[0]?.imageUrl || 'https://picsum.photos/600/400'"
+    [src]="space.colivingSpace?.images?.[0]?.imageUrl || 'assets/images/default-space.jpg'"
     class="card-img-top"
     alt="{{ space.titlePrivateSpace }}"
+    (error)="useFallbackImage($event)"
   >
 
   <div class="card-body">
