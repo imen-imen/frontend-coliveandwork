@@ -1,74 +1,91 @@
-/* Style global pour <a> et <button> du composant */
+/* ============================================================
+   BUTTON COMPONENT — VERSION FINALE PROPRE + RESPONSIVE
+============================================================ */
+
+/* Base commune pour <a> et <button> */
 .app-btn {
-  display: inline-flex !important;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: auto !important;     
+
   padding: 0.6rem 1.4rem;
   border-radius: 0.5rem;
+
   font-weight: 600;
   text-transform: uppercase;
   white-space: nowrap;
+
+  text-decoration: none;
   cursor: pointer;
-  text-decoration: none;      
   border: none;
-  background: none;
+
+  transition: all 0.25s ease;
 }
 
-/* Bouton principal (orange) */
+/* =========================================
+   TYPES DE BOUTONS
+========================================= */
+
+/* PRIMARY (orange) */
 .btn-primary-custom {
   background-color: #ff6d36;
-  color: #ffffff;
-  border: none;
-  border-radius: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  transition: background-color 0.3s ease;
+  color: #fff;
 }
-
 .btn-primary-custom:hover {
- 	background-color: #e65d2c;
+  background-color: #e65d2c;
 }
 
-/* Bouton secondaire (gris clair) */
+/* SECONDARY (gris clair) */
 .btn-secondary-custom {
   background-color: #dbdbdb;
-  color: #000000;
-  border-radius: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  font-weight: 500;
+  color: #000;
 }
 
-/* Bouton contour (orange transparent) */
+/* OUTLINE (contour orange) */
 .btn-outline-custom {
-  background-color: transparent;
+  background: transparent;
   border: 2px solid #ff6d36;
   color: #ff6d36;
-  border-radius: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
 }
-
 .btn-outline-custom:hover {
   background-color: #ff6d36;
-  color: #ffffff;
-}
-
-/* Bouton icône seule (loupe) */
-.search-btn {
-  width: 40px !important;
-  height: 38px !important;
-  padding: 0 !important;
-  border-radius: 0.5rem; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.search-btn i {
-  font-size: 18px;
   color: #fff;
+}
+
+/* =========================================
+   ICON ONLY MODE (ex: loupe, menu)
+========================================= */
+.app-btn-icon {
+  width: 42px;
+  height: 42px;
+  padding: 0 !important;
+}
+
+.app-btn-icon i {
+  font-size: 18px;
+}
+
+/* =========================================
+   FULL WIDTH (block mode)
+========================================= */
+.app-btn-block {
+  width: 100%;
+}
+
+/* =========================================
+   RESPONSIVE — MOBILE
+========================================= */
+@media (max-width: 576px) {
+
+  /* tous les boutons prennent la largeur */
+  .app-btn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+
+  .app-btn-icon {
+    width: 44px;
+    height: 44px;
+  }
 }

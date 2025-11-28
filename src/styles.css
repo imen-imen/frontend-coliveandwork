@@ -1,140 +1,146 @@
 /* ============================================================
-   THEME GLOBAL COLIVE&WORK
-   ============================================================ */
+   THEME GLOBAL COLIVE&WORK — VERSION FINALE CORRIGÉE
+============================================================ */
 
-/* Couleurs principales :
-   Noir : #000000
-   Orange : #ff6d36
-   Blanc : #ffffff
-   Gris clair : #dbdbdb
-*/
+/* IMPORTS */
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
-/* Font globale et couleurs de base */
-body {
-  background-color: #000000;
-  color: #ffffff; 
-  font-family: "Inter", Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-/* Titres */
-h1, h2, h3, h4, h5 {
-  color: #ffffff;
-  font-weight: 600;
-}
-
-/* ===== Titre commun à toutes les sections ===== */
-h2.section-title {
-  color: #ff6d36;
-  font-weight: 700;
-  font-size: 1.6rem;     
-  text-transform: uppercase;
-  margin-bottom: 2rem;
-  text-align: center;       
-}
-
-@media (max-width: 576px) {
-  h2.section-title { font-size: 1.3rem; }
-}
-
-/* variante plus grande si besoin */
-h2.section-title.section-title--lg { font-size: 1.9rem; }
-
-/* Liens */
-a {
-  color: #ff6d36;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #dbdbdb; 
-}
-
-/* Boutons principaux */
-.btn-primary {
-  background-color: #ff6d36;
-  border: none;
-  color: #ffffff;
-}
-
-.btn-primary:hover {
-  background-color: #e55e2c; 
-}
-
-/* Boutons secondaires (contour orange) */
-.btn-outline-primary {
-  color: #ff6d36;
-  border-color: #ff6d36;
-}
-
-.btn-outline-primary:hover {
-  background-color: #ff6d36;
-  color: #ffffff;
+/* ============================================================
+   1. FONT MONA SANS
+============================================================ */
+@font-face {
+  font-family: "Mona Sans";
+  src: url("assets/fonts/mona-sans/MonaSansVF[wght,opsz].woff2") format("woff2-variations");
+  font-weight: 200 900;
+  font-display: swap;
 }
 
 /* ============================================================
-   SECTIONS
-   ============================================================ */
-
-/* Sections générales */
-section {
-  background-color: #111111;
-  color: #ffffff;
-  padding: 2rem 0;
-  border-radius: 0.5rem;     /* (corrigé : on a retiré margin-bottom) */
-}
-
-section.hero {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-.fixed-search {
-  margin-bottom: 0 !important;
-}
-
-/* ============================================================
-   AJUSTEMENTS BOOTSTRAP POUR LE THEME
-   ============================================================ */
-
-/* Harmoniser les couleurs des titres */
-section h2, section h3, section h4 {
-  color: #ff6d36; 
-}
-
-/* Uniformiser la largeur des containers */
-.container {
-  max-width: 1200px;
-}
-
-/* ============================================================
-   AJUSTEMENTS DU FOND GLOBAL
-   ============================================================ */
-
-/* Fond noir sur toute la page */
+   2. GLOBAL
+============================================================ */
 html, body {
   height: 100%;
+  margin: 0;
+  padding: 0;
   background-color: #000 !important;
   color: #fff;
+  font-family: "Mona Sans", Arial, sans-serif;
 }
 
-/* Composant principal Angular */
 app-root {
   display: block;
   min-height: 100vh;
   background-color: #000;
 }
 
-/* Suppression des fonds blancs Bootstrap */
-.container, .row, .col {
-  background-color: transparent !important;
+/* ============================================================
+   3. TITRES
+============================================================ */
+h1, h2, h3, h4, h5 {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+h2.section-title {
+  color: #ff6d36;
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  h2.section-title { font-size: 1.3rem; }
+}
+
+h2.section-title.section-title--lg { font-size: 1.9rem; }
+
+/* ============================================================
+   4. LIENS
+============================================================ */
+a {
+  color: #ff6d36;
+  text-decoration: none;
+}
+a:hover {
+  color: #dbdbdb;
 }
 
 /* ============================================================
-   FIN DU FICHIER GLOBAL
-   ============================================================ */
+   5. BOUTONS BOOTSTRAP
+============================================================ */
+.btn-primary {
+  background-color: #ff6d36;
+  border: none;
+  color: #fff;
+}
+.btn-primary:hover { background-color: #e55e2c; }
+
+.btn-outline-primary {
+  color: #ff6d36;
+  border-color: #ff6d36;
+}
+.btn-outline-primary:hover {
+  background-color: #ff6d36;
+  color: #fff;
+}
+
+/* ============================================================
+   6. SECTIONS
+============================================================ */
+section {
+  background-color: #111;
+  color: #fff;
+  padding: 2rem 0;
+  border-radius: .5rem;
+}
+
+section.hero {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin: 0 !important;
+}
+
+/* ============================================================
+   7. FIXES BOOTSTRAP — VERSION SAFE
+============================================================ */
+
+.container, .row {
+  background-color: transparent !important;
+}
+
+/* IMPORTANT : NE PAS TOUCHER AUX .col ! */
+
+/* ============================================================
+   8. FIXES SEARCH-BAR / HEADER
+============================================================ */
+
+.fixed-search {
+  margin-bottom: 0 !important;
+}
+
+/* ============================================================
+   9. RESPONSIVE GLOBAL
+============================================================ */
+@media (max-width: 576px) {
+  section { padding: 1.2rem 0; }
+}
+
+/* ============================================================
+   10. FOOTER FIX
+============================================================ */
+@media (max-width: 450px) {
+  .footer-links li {
+    display: block;
+    margin: .4rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-bottom span {
+    display: block;
+    margin-bottom: .3rem;
+  }
+}

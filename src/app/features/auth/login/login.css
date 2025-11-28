@@ -1,4 +1,4 @@
-/* ----- PAGE GLOBALE LOGIN----- */
+/* ----- PAGE GLOBALE LOGIN ----- */
 .login-page {
   background: #000;
   color: #fff;
@@ -39,11 +39,6 @@
   width: 100%;
 }
 
-.form-container .row {
-  justify-content: center;
-}
-
-/* Labels */
 .label {
   font-size: 1.1rem;
   font-weight: 600;
@@ -52,10 +47,10 @@
 
 /* Champ invalide : bordure rouge */
 .is-invalid-field {
-  border: 1px solid #ff4d4f;
+  border: 1px solid #ff4d4f !important;
 }
 
-/* Texte d'erreur sous les champs */
+/* Texte d'erreur */
 .error small {
   color: #ff6a2b;
   font-size: 0.85rem;
@@ -65,28 +60,32 @@
 
 /* ----- OPTIONS (Se souvenir / Mot de passe oublié) ----- */
 .options-row {
-  margin-top: 10px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
 }
 
+/* Bloc "Se souvenir de moi" */
 .remember-block {
   display: flex;
   align-items: center;
-  justify-content: flex-end;   /* alignement centré horizontal */
-  gap: 8px;
+  gap: 6px;
   white-space: nowrap;
 }
 
+/* Bloc "Mot de passe oublié ?" */
 .forgot-block {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  margin-left: 30px;           /* espace parfait pour séparation */
+  white-space: nowrap;
 }
 
 .forgot {
-  color: #fff;
+  color: #ff6a2b;
   text-decoration: underline;
-  white-space: nowrap;
+  cursor: pointer;
 }
 
 .forgot:hover {
@@ -102,18 +101,17 @@
 /* ----- RESPONSIVE ----- */
 @media (max-width: 576px) {
 
-  .label {
-    text-align: left;
-    margin-bottom: 0.5rem;
+  .options-row {
+    flex-direction: column;
+    gap: 10px;
   }
 
   .remember-block,
   .forgot-block {
-    justify-content: flex-start;
-    margin-left: 0;
+    justify-content: center;
   }
 
-  .forgot-block {
-    margin-top: 0.5rem;
+  .forgot {
+    text-align: center;
   }
 }

@@ -1,121 +1,60 @@
-/* ============================================================
-   HERO SECTION - COLIVE & WORK (VERSION FINALE)
-============================================================ */
+/* =============================================
+   HERO SECTION — VERSION BOOTSTRAP RESPONSIVE
+============================================= */
 
-/* Conteneur principal */
 .hero {
   position: relative;
-  background: url('/assets/images/home/img-hero.jpg') center/cover no-repeat;
-  min-height: 45vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem 1rem;
-  z-index: 1;
+  background: url('/assets/images/home/img-hero.jpg') center / cover no-repeat;
+  min-height: 60vh;
+  padding: 4rem 1rem;
 }
 
-/* Overlay sombre pour rendre le texte lisible */
-.hero::after {
+/* Overlay sombre */
+.hero::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: rgba(0,0,0,0.45);
   z-index: 1;
 }
 
-/* Texte et bouton au-dessus de l’overlay */
-.hero h1,
-.hero p,
+/* Élément au-dessus de l’overlay */
+.hero-title,
+.hero-subtitle,
+.hero-text,
 .hero app-button {
   position: relative;
   z-index: 2;
 }
 
-/* Titre principal */
-.hero h1 {
-  font-size: 3rem;
+/* TITRE */
+.hero-title {
+  font-size: clamp(1.8rem, 5vw, 3rem);
   font-weight: 700;
   letter-spacing: 2px;
-  color: white;
   margin-bottom: 1rem;
 }
 
-/* Texte d’introduction */
-.hero p {
-  font-size: 1.2rem;
-  line-height: 1.4;
-  max-width: 700px;
-  margin: 0 auto 1rem auto;
+/* SOUS-TITRE */
+.hero-subtitle {
+  font-size: clamp(1rem, 3vw, 1.4rem);
+  margin-bottom: .8rem;
   color: #f1f1f1;
 }
 
-/* Bouton */
+/* TEXTE CENTRAL */
+.hero-text {
+  font-size: clamp(0.95rem, 2.5vw, 1.2rem);
+  margin-bottom: 1.4rem;
+  color: #e1e1e1;
+}
+
+/* BOUTON */
 .hero app-button {
   display: inline-block;
-  transform: scale(1);
-  transition: transform 0.3s ease;
+  transition: transform .3s ease;
 }
 
 .hero app-button:hover {
-  transform: scale(1.05);
-}
-
-/* ============================================================
-   MOBILE < 768px
-============================================================ */
-@media (max-width: 767px) {
-
-  .hero {
-    min-height: 55vh;
-    padding: 1.5rem 1rem;
-  }
-
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-}
-
-/* ============================================================
-  TABLETTE 768px – 1023px
-============================================================ */
-@media (min-width: 768px) and (max-width: 1023px) {
-
-  .hero {
-    min-height: 40vh;
-  }
-
-  .hero h1 {
-    font-size: 2.4rem;
-  }
-
-  .hero p {
-    font-size: 1.1rem;
-  }
-}
-
-/* ============================================================
-   DESKTOP ≥ 1024px
-============================================================ */
-@media (min-width: 1024px) {
-
-  .hero {
-    min-height: 45vh;
-  }
-
-  .hero h1 {
-    font-size: 3rem;
-  }
-
-  .hero p {
-    font-size: 1.2rem;
-  }
+  transform: scale(1.04);
 }

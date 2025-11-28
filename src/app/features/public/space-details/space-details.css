@@ -50,7 +50,7 @@ p {
 }
 
 /* ===========================
-   Bloc photos — AJUSTÉ
+   Bloc photos
 =========================== */
 .photos {
   margin: 25px 0 35px;
@@ -61,10 +61,9 @@ p {
   height: auto;
   border-radius: 6px;
   display: block;
-  margin-bottom: 15px;  /* espace propre */
+  margin-bottom: 15px;
 }
 
-/* 3 petites photos — alignées */
 .photo-grid {
   display: flex;
   justify-content: space-between;
@@ -78,7 +77,7 @@ p {
 }
 
 /* ===========================
-   Équipements (ICÔNES BOOTSTRAP)
+   Équipements
 =========================== */
 .equipments {
   list-style: none;
@@ -102,7 +101,7 @@ p {
 }
 
 /* ===========================
-   Coliving parent info
+   Info coliving
 =========================== */
 .coliving-info p {
   margin: 4px 0;
@@ -110,7 +109,7 @@ p {
 }
 
 /* ===========================
-   Image carte
+   Carte
 =========================== */
 .map-image {
   width: 100%;
@@ -121,7 +120,7 @@ p {
 }
 
 /* ===========================
-   Bloc de droite (réservation)
+   Bloc réservation (right)
 =========================== */
 .box {
   background: #fff;
@@ -129,21 +128,7 @@ p {
   border-radius: 8px;
   color: #111;
   width: 100%;
-}
-
-.text {
-  margin-bottom: 20px;
-}
-
-.badge {
-  background: #00b679;
-  padding: 6px 12px;
-  font-weight: bold;
-  font-size: 13px;
-  color: white;
-  border-radius: 4px;
-  margin-bottom: 15px;
-  display: inline-block;
+  margin-bottom: 25px;
 }
 
 /* ===========================
@@ -160,13 +145,7 @@ select {
   margin-top: 6px;
 }
 
-.min-stay {
-  font-size: 13px;
-  color: #777;
-  margin-top: -10px;
-}
-
-/* Option DUO */
+/* DUO */
 .duo-options {
   display: flex;
   gap: 10px;
@@ -189,34 +168,6 @@ select {
   color: white;
 }
 
-/* Boutons */
-.btn-primary {
-  width: 100%;
-  background: #ff6a00;
-  padding: 12px;
-  border: none;
-  color: #fff;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-top: 10px;
-  font-size: 15px;
-}
-
-.btn-secondary {
-  width: 100%;
-  background: #222;
-  padding: 12px;
-  border: none;
-  color: #fff;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-top: 10px;
-  font-size: 15px;
-}
-
-/* ===========================
-   Chat
-=========================== */
 .chat {
   font-size: 14px;
   margin-top: 30px;
@@ -225,7 +176,7 @@ select {
 }
 
 /* ===========================
-   Responsive LARGE (≤ 950px)
+   RESPONSIVE — TABLETTE (≤ 950px)
 =========================== */
 @media (max-width: 950px) {
   .details-container {
@@ -237,17 +188,13 @@ select {
     width: 100%;
   }
 
-  .box {
-    position: static;
-  }
-
   .map-image {
     max-width: 100%;
   }
 }
 
 /* ===========================
-   Responsive TABLETTE (≤ 768px)
+   RESPONSIVE — TABLETTE (≤ 768px)
 =========================== */
 @media (max-width: 768px) {
 
@@ -260,11 +207,6 @@ select {
     padding: 0 10px;
   }
 
-  .description {
-    font-size: 14px;
-  }
-
-  /* Photos → 2 colonnes */
   .photo-grid {
     flex-wrap: wrap;
   }
@@ -273,32 +215,13 @@ select {
     width: 48%;
   }
 
-  .equipments li {
-    font-size: 14px;
-  }
-
-  .icon {
-    font-size: 24px;
-  }
-
   .box {
     padding: 20px;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    font-size: 14px;
-    padding: 10px;
-  }
-
-  .map-image {
-    max-width: 100%;
-    margin-top: 15px;
   }
 }
 
 /* ===========================
-   Responsive MOBILE (≤ 480px)
+   RESPONSIVE — MOBILE (≤ 480px)
 =========================== */
 @media (max-width: 480px) {
 
@@ -307,17 +230,6 @@ select {
     text-align: center;
   }
 
-  .details-container {
-    padding: 0 5px;
-    margin-top: 20px;
-  }
-
-  .description {
-    font-size: 13px;
-    text-align: justify;
-  }
-
-  /* Photos → 1 colonne */
   .photo-grid {
     flex-direction: column;
   }
@@ -326,13 +238,9 @@ select {
     width: 100%;
   }
 
-  .equipments li {
-    padding: 4px 0;
+  .description {
     font-size: 13px;
-  }
-
-  .icon {
-    font-size: 20px;
+    text-align: justify;
   }
 
   .box {
@@ -343,22 +251,5 @@ select {
   input[type="text"] {
     padding: 8px;
     font-size: 13px;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    font-size: 13px;
-    padding: 9px;
-  }
-
-  .chat {
-    font-size: 13px;
-    margin-top: 20px;
-  }
-
-  .map-image {
-    margin-top: 20px;
-    width: 100%;
-    border-radius: 4px;
   }
 }

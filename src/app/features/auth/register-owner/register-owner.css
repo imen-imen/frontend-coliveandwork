@@ -45,72 +45,34 @@
 /* ================================
    FORMULAIRE & LABELS
 ================================== */
-
-/* Labels alignés à gauche mais bien centrés verticalement */
 .label {
   font-size: 1.1rem;
   font-weight: 600;
   color: #ff5e1a;
   white-space: nowrap;
-  line-height: 42px; /* aligne verticalement sur la hauteur d'un input */
+  line-height: 42px;
 }
 
-/* Harmonisation des lignes du formulaire */
-.row.mb-3 {
-  margin-bottom: 1.2rem !important;
-}
-
-/* Inputs */
 .form-control {
   height: 42px;
   border-radius: 6px;
   font-size: 1rem;
 }
 
-/* Contrainte pour éviter que la ligne "Nom du rue" soit écrasée */
-.col-md-1.label,
-label.col-md-1 {
-  min-width: 80px;
-}
-
-/* ================================
-   INPUT FILE (PIÈCE D’IDENTITÉ)
-================================== */
-
-input[type="file"].form-control {
-  padding: 8px;
-  height: 42px;
-  background-color: #fff;
-  border-radius: 6px;
+.error {
+  color: #ff6a2b;
+  font-size: 0.88rem;
+  margin-top: 4px;
   display: block;
-  width: 100%;
-  border: none;
-  color: #000;
-}
-
-.upload-wrapper {
-  width: 100%;
-  max-width: 100%;
-}
-
-/* ================================
-   TEXTES & CONVENTION
-================================== */
-.convention-text {
-  font-size: 1.1rem;
-  margin-top: 1.5rem;
-  color: #ff5e1a;
-  font-weight: 600;
 }
 
 /* ================================
    CHECKBOXES
 ================================== */
-
 .checkbox-line {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 12px;
   margin: 0.8rem 0;
 }
@@ -121,21 +83,22 @@ input[type="file"].form-control {
 }
 
 /* ================================
-   RESPONSIVE MOBILE
+   RESPONSIVE
 ================================== */
 @media (max-width: 576px) {
 
   .label {
     text-align: left;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.3rem;
     line-height: normal;
-  }
-
-  .row.mb-3 {
-    margin-bottom: 1rem !important;
   }
 
   .login-page {
     padding-top: 2rem;
+  }
+
+  .checkbox-line {
+    flex-direction: column;
+    text-align: center;
   }
 }

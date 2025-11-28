@@ -66,23 +66,21 @@
       </div>
 
       <!-- OPTIONS -->
-      <div class="row mb-4 justify-content-center align-items-center options-row">
+      <div class="options-row">
 
-        <div class="col-12 col-md-3"></div>
-
-        <div class="col-6 col-md-3 remember-block">
+        <div class="remember-block">
           <input type="checkbox" id="remember" formControlName="rememberMe">
           <label for="remember" class="remember-text">Se souvenir de moi</label>
         </div>
 
-        <div class="col-6 col-md-3 forgot-block">
-          <span class="forgot text-muted">Mot de passe oublié ?</span>
+        <div class="forgot-block">
+          <span class="forgot">Mot de passe oublié ?</span>
         </div>
 
       </div>
 
       <!-- BOUTON LOGIN -->
-      <div class="text-center">
+      <div class="text-center mt-4">
         <button type="submit" class="btn btn-primary">
           Se connecter
         </button>
@@ -96,11 +94,10 @@
     </p>
 
     <div class="text-center mt-2">
-<button class="btn btn-primary"
-        [routerLink]="userType === 'client' ? '/espace-client/registration' : '/espace-proprietaire/registration'">
-  S'inscrire
-</button>
-
+      <button class="btn btn-primary"
+              [routerLink]="userType === 'client' ? '/espace-client/registration' : '/espace-proprietaire/registration'">
+        S'inscrire
+      </button>
     </div>
 
   </div>

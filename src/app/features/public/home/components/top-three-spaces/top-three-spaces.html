@@ -1,23 +1,22 @@
 <section class="top-spaces-section">
-  <div class="container">
+	<div class="container">
 
-    <h2 class="section-title">
-      Nos espaces privés disponibles les mieux notés
-    </h2>
+		<h2 class="section-title">
+			Nos espaces privés disponibles les mieux notés
+		</h2>
 
-    <div class="row g-4 mt-3 justify-content-center">
+		<div class="row spaces-row g-4 mt-3 justify-content-center">
+			@for (sp of spaces; track sp.id) {
+			<div class="col-12 col-sm-6 col-lg-4">
+				<app-space-card [space]="sp"></app-space-card>
+			</div>
+			} @empty {
+			<div class="col-12 text-center text-muted">
+				Aucun espace disponible pour le moment.
+			</div>
+			}
 
-      @for (sp of spaces; track sp.id) {
-        <div class="col-12 col-sm-6 col-lg-4">
-          <app-space-card [space]="sp"></app-space-card>
-        </div>
-      } @empty {
-        <div class="col-12 text-center text-muted">
-          Aucun espace disponible pour le moment.
-        </div>
-      }
+		</div>
 
-    </div>
-
-  </div>
+	</div>
 </section>

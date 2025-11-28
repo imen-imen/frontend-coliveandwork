@@ -1,16 +1,19 @@
+/* =======================================
+   TOP 3 ESPACES
+======================================= */
+
 .top-spaces-section {
   padding: 60px 0;
   background-color: #0d0d0d;
 }
 
-.section-title {
+/* Titre section */
+.top-spaces-section .section-title {
   text-align: center;
-  font-size: 30px;
-  font-weight: bold;
-  color: var(--orange, #ff6600);
   margin-bottom: 30px;
 }
 
-.row {
+/* CENTRAGE des cartes*/
+.top-spaces-section .spaces-row {
   justify-content: center;
 }

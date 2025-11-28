@@ -1,65 +1,68 @@
 /* ============================================================
-   SECTION : NOUS SOMMES LEADER - COLIVE & WORK
-   ============================================================ */
+   SECTION : NOUS SOMMES LEADER - VERSION ORIGINALE
+============================================================ */
 
 .leader-section {
   padding: 3rem 1rem;
+  background-color: #111; /* fond sombre */
   text-align: center;
 }
 
-/* Titre principal */
-.leader-section .title {
-  color: #ff6d36; /* orange du thème */
-  font-weight: 700;
+/* Titre */
+.leader-section .section-title {
+  color: #ff6d36;
   font-size: 1.6rem;
+  font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 2rem;
 }
 
-/* Conteneur des statistiques */
+/* Conteneur des stats */
 .stats {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
-/* Carte de statistique */
+/* Carte */
 .stat {
-  background-color: #dbdbdb; /* fond gris clair */
-  color: #000; /* texte noir */
-  border-radius: 0.5rem;
-  padding: 1.5rem;
-  width: 180px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.2s ease, background-color 0.2s ease;
-  text-align: center;
+  background-color: #dcdcdc; /* gris EXACT comme ta maquette */
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  width: 230px;               /* largeur exacte */
+  min-height: 160px;          /* uniformise la hauteur */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 12px rgba(0,0,0,0.25);
+  transition: transform .2s ease;
 }
 
-/* Icônes noires */
+/* Icône */
 .stat i {
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: #000;
   margin-bottom: 1rem;
-  display: block;
 }
 
-/* Texte dans les cartes */
+/* Texte */
 .stat h3 {
-  color: #000;
   font-size: 1rem;
   font-weight: 600;
-  line-height: 1.5;
+  color: #000;
+  line-height: 1.4;
   margin: 0;
 }
 
-/* Effet au survol */
+/* Hover */
 .stat:hover {
   transform: translateY(-5px);
-  background-color: #ffffff;
 }
 
-/* Responsive */
+/* ==================== RESPONSIVE ==================== */
+
 @media (max-width: 992px) {
   .stat {
     width: 45%;
@@ -69,9 +72,5 @@
 @media (max-width: 576px) {
   .stat {
     width: 100%;
-  }
-
-  .leader-section .title {
-    font-size: 1.3rem;
   }
 }

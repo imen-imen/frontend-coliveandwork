@@ -1,32 +1,38 @@
-/* ============================================================
-   HEADER COLIVE & WORK (spécifique à la navbar)
-   ============================================================ */
+/* ================================================
+   HEADER COLIVE&WORK — VERSION FINALE RESPONSIVE
+================================================ */
 
-/* Container principal du header */
+/* NAVBAR */
 .navbar {
   padding: 0.8rem 1rem;
   background-color: #000;
 }
 
-/* Logo et texte */
-.navbar-brand {
-  font-weight: 700;
-  display: flex;
-  align-items: center;
+/* LOGO — FIX RESPONSIVE COMPLET */
+.logo-img {
+  max-width: 100% !important;
+  height: auto !important;
+  width: auto !important;
+
+  max-height: 55px !important; /* taille desktop */
+
+  object-fit: contain !important;
 }
 
-.navbar-brand img {
-  max-height: 60px;
+/* mobile : logo plus petit */
+@media (max-width: 576px) {
+  .logo-img {
+    max-height: 38px !important;
+  }
 }
 
-/* Liens du menu */
+/* LIENS NAV */
 .nav-link {
   margin-right: 1rem;
-  transition: color 0.3s, border-color 0.3s;
+  transition: color .3s, border-color .3s;
   border-bottom: 2px solid transparent;
 }
 
-/* États : survol et actif */
 .nav-link:hover,
 .nav-link.active {
   color: #ff6d36 !important;
@@ -34,24 +40,22 @@
   font-weight: 700;
 }
 
-/* Bouton du menu mobile */
+/* BURGER */
 .navbar-toggler {
   background-color: #ff6d36;
   border: none;
 }
 
 .navbar-toggler-icon {
-  filter: invert(1); /* icône blanche sur fond orange */
+  filter: invert(1);
 }
 
-/* Espacement entre les boutons personnalisés */
-app-button + app-button {
-  margin-left: 0.5rem;
+/* BOUTONS → petit espace entre eux */
+.header-buttons app-button + app-button {
+  margin-left: .5rem;
 }
 
-/* ======== STYLE DES BOUTONS ACTIFS (app-button) ========= */
-
-/* Quand routerLinkActive="active" est appliqué */
+/* Style des app-button actifs */
 app-button.active ::ng-deep button {
   background-color: #ff6d36 !important;
   border-color: #ff6d36 !important;
@@ -59,13 +63,29 @@ app-button.active ::ng-deep button {
   font-weight: 700;
 }
 
-/* Responsive : centrage du contenu sur petit écran */
+/* ================== RESPONSIVE TABLETTE / MOBILE ================== */
+
 @media (max-width: 991px) {
+
+  /* espace entre liens du menu */
   .navbar-nav {
     margin-top: 1rem;
+    gap: .3rem;
   }
 
-  .navbar .d-flex {
-    justify-content: center;
+  /* liens plus compacts */
+  .nav-link {
+    margin-right: 0 !important;
+    padding: .5rem 0;
+  }
+
+  /* boutons passent en colonne */
+  .header-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .header-buttons app-button {
+    width: 100%; /* full width mobile */
   }
 }

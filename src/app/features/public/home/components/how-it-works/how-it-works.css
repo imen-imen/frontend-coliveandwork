@@ -39,27 +39,28 @@
   font-size: 18px;
 }
 
-/* Icône de l’étape */
+/* Icône */
 .step-icon {
   font-size: 45px;
   color: #ff6d36;
   margin: 15px 0 20px;
 }
 
-/* Titre et texte d'étape */
+/* Titre */
 .step-title {
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 
+/* Texte */
 .step-text {
   color: #dbdbdb;
   font-size: 16px;
   text-align: center;
 }
 
-/* Effet au survol */
+/* Hover */
 .step-card:hover {
   background-color: #111;
   transform: translateY(-5px);

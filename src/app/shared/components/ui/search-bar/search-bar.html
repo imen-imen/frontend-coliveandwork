@@ -1,58 +1,49 @@
-<form class="search-row" (ngSubmit)="onSearch()">
+<form class="search-row row gx-3 gy-3 align-items-center" (ngSubmit)="onSearch()">
 
   <!-- LOCALISATION -->
-  <div class="field">
-  <select
-    class="field-input"
-    [(ngModel)]="form.city"
-    name="city"
-  >
-    <option value="">Choisissez une ville</option>
-
-    @for (c of cities; track c.id) {
-      <option [value]="c.name">{{ c.name }}</option>
-    }
-  </select>
-</div>
-
+  <div class="col-12 col-md-4 col-lg-3">
+    <select class="form-select" [(ngModel)]="form.city" name="city">
+      <option value="">Choisissez une ville</option>
+      @for (c of cities; track c.id) {
+        <option [value]="c.name">{{ c.name }}</option>
+      }
+    </select>
+  </div>
 
   <!-- DATE DÉBUT -->
-  <div class="field">
+  <div class="col-6 col-md-4 col-lg-2">
     <div class="icon-input">
-      <i class="bi bi-calendar-event" (click)="start.click()"></i>
+      <i class="bi bi-calendar-event"></i>
       <input #fakeStart type="text" class="fake-date" placeholder="Date début" readonly (click)="start.click()">
       <input #start type="date" class="real-date" (change)="fakeStart.value = start.value">
     </div>
   </div>
 
   <!-- DATE FIN -->
-  <div class="field">
+  <div class="col-6 col-md-4 col-lg-2">
     <div class="icon-input">
-      <i class="bi bi-calendar-check" (click)="end.click()"></i>
+      <i class="bi bi-calendar-check"></i>
       <input #fakeEnd type="text" class="fake-date" placeholder="Date fin" readonly (click)="end.click()">
       <input #end type="date" class="real-date" (change)="fakeEnd.value = end.value">
     </div>
   </div>
 
-<!-- NOMBRE DE PERSONNES  -->
-<div class="people-field-inline">
+  <!-- NOMBRE DE PERSONNES -->
+  <div class="col-12 col-md-4 col-lg-3">
+    <div class="people-field-inline">
+      <span class="people-inline-label">Nombre de personnes</span>
 
-  <span class="people-inline-label">Nombre de personnes</span>
+      <select class="people-inline-select"
+              [(ngModel)]="form.people"
+              name="people">
+        <option value="1">1</option>
+        <option value="2">2</option>
+      </select>
+    </div>
+  </div>
 
-<select
-  class="people-inline-select"
-  [(ngModel)]="form.people"
-  name="people"
->
-  <option value="1">1</option>
-  <option value="2">2</option>
-</select>
-
-</div>
-
-
-  <!-- BOUTON LOUPE -->
-  <div class="btn-wrapper">
+  <!-- BOUTON -->
+  <div class="col-12 col-md-2 col-lg-2 d-flex justify-content-center">
     <app-button
       type="primary"
       icon="bi bi-search"

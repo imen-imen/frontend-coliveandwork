@@ -6,7 +6,9 @@
     [ngClass]="{
       'btn-primary-custom': type === 'primary',
       'btn-secondary-custom': type === 'secondary',
-      'btn-outline-custom': type === 'outline'
+      'btn-outline-custom': type === 'outline',
+      'app-btn-icon': isIconOnly,
+      'app-btn-block': block
     }"
   >
     @if (icon) {
@@ -27,7 +29,9 @@
     [ngClass]="{
       'btn-primary-custom': type === 'primary',
       'btn-secondary-custom': type === 'secondary',
-      'btn-outline-custom': type === 'outline'
+      'btn-outline-custom': type === 'outline',
+      'app-btn-icon': isIconOnly,
+      'app-btn-block': block
     }"
   >
     @if (icon) {

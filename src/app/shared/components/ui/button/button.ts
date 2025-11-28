@@ -14,5 +14,8 @@ export class Button {
   @Input() type: 'primary' | 'secondary' | 'outline' = 'primary';
   @Input() routerLink?: string | any[];
   @Input() icon: string = '';
-  @Input() isIconOnly = false;
+  @Input() isIconOnly: boolean = false;
+
+  /** PERMET le full width en responsive */
+  @Input() block: boolean = false;
 }

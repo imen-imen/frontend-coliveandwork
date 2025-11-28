@@ -1,156 +1,175 @@
 @if (isLoading) {
-  <p class="loading">Chargement...</p>
+<p class="loading">Chargement...</p>
 }
 
 @if (!isLoading && space) {
 
 <div class="details-container">
 
-  <!-- ===================== -->
-  <!--   COLONNE DE GAUCHE   -->
-  <!-- ===================== -->
-  <div class="left">
+	<!-- ===================== -->
+	<!--   COLONNE DE GAUCHE   -->
+	<!-- ===================== -->
+		<div class="left"> <h1>{{ space.titlePrivateSpace }}</h1>
 
-    <h1>{{ space.titlePrivateSpace }}</h1>
+		<p class="description">{{ space.descriptionPrivateSpace }}</p>
+		<p>
+			<strong>Surface :</strong>
+			{{ space.areaM2 }}
+			m²</p>
+		<p>
+			<strong>Capacité :</strong>
+			{{ space.capacity }}
+			personne(s)</p>
 
-    <p class="description">{{ space.descriptionPrivateSpace }}</p>
-    <p><strong>Surface :</strong> {{ space.areaM2 }} m²</p>
-    <p><strong>Capacité :</strong> {{ space.capacity }} personne(s)</p>
+		<!-- PHOTOS -->
+		<div class="photos">
+			<img src="assets/images/private-main.jpg" class="photo-large">
 
-    <!-- PHOTOS -->
-    <div class="photos">
-      <img src="assets/images/private-main.jpg" class="photo-large">
+			<div class="photo-grid">
+				<img src="assets/images/private-1.jpg">
+				<img src="assets/images/private-2.webp">
+				<img src="assets/images/private-3.jpg">
+			</div>
+		</div>
 
-      <div class="photo-grid">
-        <img src="assets/images/private-1.jpg">
-        <img src="assets/images/private-2.webp">
-        <img src="assets/images/private-3.jpg">
-      </div>
-    </div>
+		<!-- ===================== -->
+		<!--   ÉQUIPEMENTS PRIVÉS  -->
+		<!-- ===================== --><h3>
+		Équipement de votre espace privé :
+		</h3>
 
-    <!-- ===================== -->
-    <!--   ÉQUIPEMENTS PRIVÉS  -->
-    <!-- ===================== -->
-    <h3>Équipement de votre espace privé :</h3>
+			<ul class="equipments"> <li>
+				<i class="bi bi-person-fill icon"></i>
+				Lit double
+			</li>
+			<li>
+				<i class="bi bi-laptop icon"></i>
+				Bureau</li>
+			<li>
+				<i class="bi bi-person-wheelchair icon"></i>
+				Chaise</li>
+			<li>
+				<i class="bi bi-box-seam icon"></i>
+				Rangements</li>
+			<li>
+				<i class="bi bi-card-checklist icon"></i>
+				Draps</li>
 
-    <ul class="equipments">
+		</ul>
 
-      <li><i class="bi bi-bed icon"></i> Lit double</li>
-      <li><i class="bi bi-laptop icon"></i> Bureau</li>
-      <li><i class="bi bi-person-wheelchair icon"></i> Chaise</li>
-      <li><i class="bi bi-box-seam icon"></i> Rangements</li>
-      <li><i class="bi bi-card-checklist icon"></i> Draps</li>
+		<!-- ===================== -->
+		<!--   ÉQUIPEMENTS COLIVING -->
+		<!-- ===================== --><h3>
+		Équipement de l’espace co-living :
+		</h3>
 
-    </ul>
+			<ul class="equipments"> <li>
+				<i class="bi bi-house-heart icon"></i>
+				Cuisine équipée</li>
+			<li>
+				<i class="bi bi-snow icon"></i>
+				Réfrigérateur</li>
+			<li>
+				<i class="bi bi-fire icon"></i>
+				Plaque cuisson</li>
+			<li>
+				<i class="bi bi-wifi icon"></i>
+				Internet</li>
+			<li>
+				<i class="bi bi-lightning-charge icon"></i>
+				Micro-ondes</li>
 
-    <!-- ===================== -->
-    <!--   ÉQUIPEMENTS COLIVING -->
-    <!-- ===================== -->
-    <h3>Équipement de l’espace co-living :</h3>
+		</ul>
 
-    <ul class="equipments">
+		<!-- INFOS COLIVING -->
+		<h3>À propos de l’espace coliving</h3>
 
-      <li><i class="bi bi-house-heart icon"></i> Cuisine équipée</li>
-      <li><i class="bi bi-snow icon"></i> Réfrigérateur</li>
-      <li><i class="bi bi-fire icon"></i> Plaque cuisson</li>
-      <li><i class="bi bi-wifi icon"></i> Internet</li>
-      <li><i class="bi bi-lightning-charge icon"></i> Micro-ondes</li>
+		<p>{{ space.colivingSpace.descriptionColivingSpace }}</p>
 
-    </ul>
+		<div class="coliving-info">
+			<p>
+				<strong>Type :</strong>
+				{{ space.colivingSpace.housingType }}</p>
+			<p>
+				<strong>Pièces :</strong>
+				{{ space.colivingSpace.roomCount }}</p>
+			<p>
+				<strong>Surface :</strong>
+				{{ space.colivingSpace.totalAreaM2 }}
+				m²</p>
+			<p>
+				<strong>Capacité max :</strong>
+				{{ space.colivingSpace.capacityMax }}</p>
+		</div>
 
-    <!-- INFOS COLIVING -->
-    <h3>À propos de l’espace coliving</h3>
+	</div>
 
-    <p>{{ space.colivingSpace.descriptionColivingSpace }}</p>
+	<!-- ===================== -->
+	<!--   COLONNE DE DROITE   -->
+	<!-- ===================== -->
+		<div class="right"> @if (!isLogged) {
 
-    <div class="coliving-info">
-      <p><strong>Type :</strong> {{ space.colivingSpace.housingType }}</p>
-      <p><strong>Pièces :</strong> {{ space.colivingSpace.roomCount }}</p>
-      <p><strong>Surface :</strong> {{ space.colivingSpace.totalAreaM2 }} m²</p>
-      <p><strong>Capacité max :</strong> {{ space.colivingSpace.capacityMax }}</p>
-    </div>
+		<div class="box not-connected">
 
-  </div>
+			<p class="text">
+				Envie de réserver cet espace ?
+				<br>
+				Connectez-vous ou inscrivez-vous pour garantir votre place.
+			</p>
 
-  <!-- ===================== -->
-  <!--   COLONNE DE DROITE   -->
-  <!-- ===================== -->
-  <div class="right">
+			<app-button label="Se connecter" type="primary" [routerLink]="'/espace-client/login'"></app-button>
 
-    @if (!isLogged) {
+			<app-button label="S’inscrire" type="secondary" [routerLink]="'/espace-client/registration'"></app-button>
 
-      <div class="box not-connected">
+		</div>
+		}
+				
+				    @if (isLogged && isClient) {
 
-        <p class="text">
-          Envie de réserver cet espace ? <br>
-          Connectez-vous ou inscrivez-vous pour garantir votre place.
-        </p>
+		<div class="box connected">
 
-        <app-button 
-          label="Se connecter" 
-          type="primary" 
-          [routerLink]="'/espace-client/login'">
-        </app-button>
+			<span class="badge">DISPONIBLE MAINTENANT</span>
 
-        <app-button 
-          label="S’inscrire" 
-          type="secondary" 
-          [routerLink]="'/espace-client/registration'">
-        </app-button>
+			<p class="small-info">La réservation minimale est d’un mois.</p>
 
-      </div>
-    }
+			<h4>Détails de mon séjour</h4>
 
-    @if (isLogged && isClient) {
+			<label>Date de début</label>
+			<input type="date" [(ngModel)]="start">
 
-      <div class="box connected">
+			<label>Date de fin</label>
+			<input type="date" [(ngModel)]="end">
 
-        <span class="badge">DISPONIBLE MAINTENANT</span>
+			<p class="min-stay">Séjour minimal : 1 mois</p>
 
-        <p class="small-info">La réservation minimale est d’un mois.</p>
+			<label>Option Duo</label>
+			<div class="duo-options">
+				<span (click)="duo = true; updateTotals()" [class.active]="duo === true">Oui</span>
+				<span (click)="duo = false; updateTotals()" [class.active]="duo === false">Non</span>
+			</div>
 
-        <h4>Détails de mon séjour</h4>
+			<h4>Détails du prix</h4>
 
-        <label>Date de début</label>
-        <input type="date" [(ngModel)]="start">
+			<label>Prix hors taxes</label>
+			<input type="text" [value]="priceHT + ' €'" readonly>
 
-        <label>Date de fin</label>
-        <input type="date" [(ngModel)]="end">
+			<label>Taxes</label>
+			<input type="text" [value]="taxes + ' €'" readonly>
 
-        <p class="min-stay">Séjour minimal : 1 mois</p>
+			<label>Total à payer</label>
+			<input type="text" [value]="totalPrice + ' €'" readonly>
 
-        <label>Option Duo</label>
-        <div class="duo-options">
-          <span (click)="duo = true; updateTotals()" [class.active]="duo === true">Oui</span>
-          <span (click)="duo = false; updateTotals()" [class.active]="duo === false">Non</span>
-        </div>
+			<app-button label="Réserver" type="primary" (click)="reserve()"></app-button>
 
-        <h4>Détails du prix</h4>
+			<div class="chat">Une question ? Contactez le propriétaire.</div>
 
-        <label>Prix hors taxes</label>
-        <input type="text" [value]="priceHT + ' €'" readonly>
+		</div>
+		}
 
-        <label>Taxes</label>
-        <input type="text" [value]="taxes + ' €'" readonly>
+		<h3 style="margin-top: 30px;">Localisation</h3>
+		<img src="assets/images/google-map-img.png" class="map-image">
 
-        <label>Total à payer</label>
-        <input type="text" [value]="totalPrice + ' €'" readonly>
-
-        <app-button 
-          label="Réserver"
-          type="primary"
-          (click)="reserve()">
-        </app-button>
-
-        <div class="chat">Une question ? Contactez le propriétaire.</div>
-
-      </div>
-    }
-
-    <h3 style="margin-top: 30px;">Localisation</h3>
-    <img src="assets/images/google-map-img.png" class="map-image">
-
-  </div>
+	</div>
 
 </div>
 

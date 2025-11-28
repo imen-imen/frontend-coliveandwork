@@ -1,15 +1,19 @@
+/* ============================================================
+   FOOTER — VERSION FINALE RESPONSIVE
+============================================================ */
+
 .footer {
-  background-color: #000000;
-  color: #ffffff;
-  font-family: "Inter", Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  font-family: "Mona Sans", Arial, sans-serif;
   text-align: center;
 }
 
+/* Liens légaux */
 .footer .footer-links a {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: #ffffff;
   transition: color 0.3s ease;
 }
 
@@ -17,22 +21,46 @@
   color: #ff6d36;
 }
 
+/* Ligne du bas */
 .footer-bottom {
   margin-top: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
   font-size: 0.9rem;
 }
 
+.footer-bottom span {
+  white-space: nowrap;
+}
+
+/* Icônes */
 .footer .social-link {
   font-size: 1.2rem;
-  color: #ffffff;
   transition: color 0.3s ease;
 }
 
 .footer .social-link:hover {
   color: #ff6d36;
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+/* Petit mobile */
+@media (max-width: 480px) {
+
+  /* Met les liens les uns sous les autres */
+  .footer-links li {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  /* Ligne du bas : tout passe en colonne */
+  .footer-bottom {
+    flex-direction: column !important;
+    gap: 0.6rem !important;
+  }
+
+  .footer-bottom span {
+    display: block;
+  }
 }
